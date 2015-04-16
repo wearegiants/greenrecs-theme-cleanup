@@ -1,0 +1,31 @@
+<h3>Basic</h3>
+
+<p>Tabs will automatically turn a set of links into a tabbed interface. The link&rsquo;s <code>href</code> attribute should point to the desired content&rsquo;s fragment identifier, white the <code>data-tabs-group</code> attribute should remain consistent between linked tabs:</p>
+
+<p><code>javascript
+$(".tab").tabs();
+</code></p>
+
+<p>```markup
+<nav>
+    <a href="#tab-one" class="tab" data-tabs-group="tab-group">One</a>
+    <a href="#tab-two" class="tab" data-tabs-group="tab-group">Two</a>
+    <a href="#tab-three" class="tab" data-tabs-group="tab-group">Three</a>
+</nav></p>
+
+<div id="tab-one">
+    ...
+</div>
+
+
+<div id="tab-two">
+    ...
+</div>
+
+
+<div id="tab-three">
+    ...
+</div>
+
+
+<p>```</p>

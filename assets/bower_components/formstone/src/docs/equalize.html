@@ -1,0 +1,55 @@
+<h3>Basic</h3>
+
+<p>By default, Equalize will set the height of an element&rsquo;s children to the largest of the group:</p>
+
+<p><code>javascript
+$(".target").equalize();
+</code></p>
+
+<p>```markup</p>
+
+<div class="target">
+    <div>...</div>
+    <div>...</div>
+    <div>...</div>
+</div>
+
+
+<p>```</p>
+
+<h3>Targets</h3>
+
+<p>Specify a valid <code>target</code> selector to equalize specific child elements:</p>
+
+<p><code>javascript
+$(".target").equalize({
+    target: ".child"
+});
+</code></p>
+
+<p>```markup</p>
+
+<div class="target">
+    <div>
+        <p class="child">...</p>
+    </div>
+    <div>
+        <p class="child">...</p>
+    </div>
+    <div>
+        <p class="child">...</p>
+    </div>
+</div>
+
+
+<p>```</p>
+
+<h3>Width</h3>
+
+<p>Set the <code>protperty</code> to width to Equalize the widths of elements, rather than heights:</p>
+
+<p><code>javascript
+$(".target").equalize({
+    property: "width"
+});
+</code></p>

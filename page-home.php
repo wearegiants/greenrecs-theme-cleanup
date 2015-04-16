@@ -1,0 +1,153 @@
+<?php Themewrangler::setup_page();get_header(/***Template Name: Homepage */); ?>
+
+<div id="home--wrapper">
+
+  <div id="home--banner" class="bg green"><?php include locate_template('parts/home/carousel.php' ); ?></div>
+
+  <div id="home--schedule">
+    <div class="fs-row">
+      <div class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered">
+        <div class="fs-row">
+          <div class="fs-cell fs-lg-6 fs-md-3 fs-sm-3">
+            <i class="icon doctor alignleft"></i>
+            <h3>Sign Up And Schedule An Appointment</h3>
+            <p>Sign up and choose a date and time that works best for you. Our average appointment time is about 15-30 minutes.</p>
+          </div>
+          <div class="fs-cell fs-lg-5 fs-md-3 fs-sm-3 fs-right">
+            <button class="btn big btn-primary wide">Reserve your recommendation</button>
+          </div>
+        </div>
+      </div>
+  </div><!-- Schedule -->
+
+  <div id="home--physicians" class="bg lightgray">
+    <div class="fs-row">
+      <div class="fs-cell fs-lg-5 fs-md-4 fs-sm-3 fs-right text-center">
+        <h3>Our Physicians</h3>
+        <p>Our team of physicians schedule an hour or so each day to take time out of their practices so they can come directly to you.</p>
+        <p><strong>EVERY PHYSICIAN IS:</strong></p>
+        <ul>
+          <li><i class="ss-icon ss-gizmo green">check</i> Is Board Certified by the State of California</li>
+          <li><i class="ss-icon ss-gizmo green">check</i> Has a current medical license in good standing</li>
+          <li><i class="ss-icon ss-gizmo green">check</i> Is educated on cannabis use for medicinal purposes</li>
+        </ul>
+      </div>
+    </div>
+  </div><!-- Our Physicians -->
+
+  <div id="home--howitworks" class="bg lightgray">
+    <div class="fs-row">
+      <div class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered">
+        <div class="fs-row">
+
+          <div class="fs-cell fs-lg-4 fs-md-2 fs-sm-3 text-center">
+            <i class="icon book"></i>
+            <h4>1. BOOK</h4>
+            <p>Our trusted team of physicians are available 7-days a week from 8am – 8pm PST.</p>
+          </div>
+
+          <div class="fs-cell fs-lg-4 fs-md-2 fs-sm-3 text-center">
+            <i class="icon meet"></i>
+            <h4>1. MEET</h4>
+            <p>Skip the traditional doctor’s office, get comfortable and see one of our experienced physicians via online video-conference from your home or office.</p>
+          </div>
+
+          <div class="fs-cell fs-lg-4 fs-md-2 fs-sm-3 text-center">
+            <i class="icon deliver"></i>
+            <h4>1. DELIVER</h4>
+            <p>Sit back and relax, your card will be arriving in the mail within two to three business days.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div><!-- How it Works -->
+
+  <div id="home--checkicon"><span class="icon check"><img src="/assets/img/how-it-works-check.png" class="img-responsive" /></span></div><!-- Check Divider -->
+
+  <div id="home--legality">
+    <div class="fs-row">
+      <header class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered text-center"><h2>Yes, this is legal.</h2></header>
+      <div class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered">
+        <div class="fs-row">
+          <div class="fs-cell fs-lg-5 fs-md-6 fs-sm-3 sizer-item">
+            <i class="icon check"></i>
+            <h4 class="green">IT PASSED THE STATE SENATE</h4>
+            <p>California Senate Bill 420 (no, that’s not a joke), otherwise known as The Medical Marijuana Program Act, was a bill passed by the California State Legislature in 2003 that mandated a voluntary program for the issuance of identification cards to qualified patients.</p>
+          </div>
+          <div class="fs-cell fs-lg-2 fs-md-hide fs-sm-hide"><div class="vertical divider sizer-item"></div></div>
+          <hr class="thin fs-cell fs-lg-hide fs-md-6 fs-sm-3 ">
+          <div class="fs-cell fs-lg-5 fs-md-6 fs-sm-3 sizer-item  text-right">
+            <i class="icon secure"></i>
+            <h4 class="green">HIPAA COMPLIANT – PRIVACY SECURED</h4>
+            <p>Protecting your private and personal medical information is our primary focus at all times. GreenRecs is HIPAA (Health Insurance Portability & Accountability Act) compliant. We do NOT share information, keep state or government records and records can only be released with a patient’s written consent.</p>
+          </div>
+          <hr class="thin fs-cell fs-lg-12 fs-md-6 fs-sm-3 ">
+          <div class="fs-cell fs-lg-12 fs-md-6 fs-sm-3 text-center">
+            <i class="icon secure"></i>
+            <h4 class="green">VIRTUAL APPOINTMENTS</h4>
+            <p>Telemedicine, originally developed by NASA in the 60s to help treat astronauts in space, allows doctors to diagnose and treat patients remotely and is now one of the most significantly growing mainstream industries in healthcare.All you need to do is offer the proper verification documents and we’re good to go.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- Home Legality -->
+
+  <div id="home--testimonials" class="testimonials bg lightgray">
+    <div class="fs-row">
+      <header class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered text-center"><h2>Testimonials</h2></header>
+      <div class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered">
+        <div class="fs-row">
+
+          <div class="testimonial fs-cell fs-lg-4 fs-md-6 fs-sm-3 text-center">
+            <img class="rounded img-responsive" src="/assets/img/greenblat.png" />
+            <p>Stephen</p>
+            <p>“Greenrecs was super fast, extremely easy and very efficient.”</p>
+          </div>
+
+          <div class="testimonial fs-cell fs-lg-4 fs-md-6 fs-sm-3 text-center">
+            <img class="rounded img-responsive" src="/assets/img/jordan.png" />
+            <p>Jordan</p>
+            <p>“Not only did I get my rec in under 3 days, but my doctor was friendly and the appointment was fast.”</p>
+          </div>
+
+          <div class="testimonial fs-cell fs-lg-4 fs-md-6 fs-sm-3 text-center">
+            <img class="rounded img-responsive" src="/assets/img/ganine.png" />
+            <p>Ganine</p>
+            <p>“Nothing better than being able to chat with your doctor during The Daily Show’s commercial break”</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div><!-- Testimonials -->
+
+  <div id="home--faq" class="faq">
+    <div class="fs-row">
+      <div class="fs-cell fs-lg-11 fs-md-6 fs-sm-3">
+        <div class="fs-row">
+
+          <div class="faq-item fs-cell fs-lg-4 fs-md-6 fs-sm-3 text-center">
+            <a href="/faq">How do I know if I qualify for a Medical Marijuana Rec (MMR)?</a>
+          </div>
+
+          <div class="faq-item fs-cell fs-lg-4 fs-md-6 fs-sm-3 text-center">
+            <a href="/faq">What “serious” medical condition(s) do I need to have to qualify for a MMR?</a>
+          </div>
+
+          <div class="faq-item fs-cell fs-lg-4 fs-md-6 fs-sm-3 text-center">
+            <a href="/faq">How long will it take to get my GreenRecs MMR?</a>
+          </div>
+
+          <div class="fs-cell fs-lg-12 fs-md-6 fs-sm-3 text-center">
+            <a href="/faq">VIEW FAQ</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<?php get_footer(); ?>

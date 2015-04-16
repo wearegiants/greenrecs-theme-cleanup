@@ -1,0 +1,46 @@
+<h3>Basic</h3>
+
+<p>Tooltip will generate a tooltip based on the target element&rsquo;s <code>data-title</code> attribute. Tooltip can be configured to open in a specific direction by setting the <code>direction</code> key at initialization:</p>
+
+<p><code>javascript
+$("a").tooltip({
+    direction: "top"
+});
+</code></p>
+
+<p><code>markup
+&lt;a href="#" data-title="ToolTip Text"&gt;Tooltip Target&lt;/a&gt;
+</code></p>
+
+<!--
+### Follow
+
+Tooltip can be configured to follow the user's mouse:
+
+```javascript
+$("a").tooltip({
+    follow: true
+});
+```
+
+### Match
+
+Tooltip can be configured to match the user's mouse position, relative to the target:
+
+```javascript
+$("a").tooltip({
+    match: true
+});
+```
+-->
+
+
+<h3>Delay</h3>
+
+<p>A delay can be set to avoid accidental tooltips:</p>
+
+<p><code>javascript
+$("a").tooltip({
+    delay: 500
+});
+</code></p>

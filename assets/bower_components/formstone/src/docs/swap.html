@@ -1,0 +1,62 @@
+<h3>Basic</h3>
+
+<p>Swap toggles classes on groups of elements based on configuration options and user interaction. It is up to the developer to utilize the classes.</p>
+
+<p><code>javascript
+$(".target").swap();
+</code></p>
+
+<p>```markup</p>
+
+<div class="target" data-swap-target=".toggle">Toggle</div>
+
+
+<div class="toggle">Target</div>
+
+
+<p>```</p>
+
+<h3>Groups</h3>
+
+<p>Swaps can be grouped together for a simple accordions or tabs.</p>
+
+<p>```markup</p>
+
+<h4>Grouped</h4>
+
+
+<div class="target" data-swap-target=".toggle_1" data-swap-group="group_1">Toggle - 1</div>
+
+
+<div class="target" data-swap-target=".toggle_2" data-swap-group="group_1">Toggle - 2</div>
+
+
+
+
+<div class="toggle_1">Target - 1</div>
+
+
+<div class="toggle_2">Target - 2</div>
+
+
+<p>```</p>
+
+<h3>Max Width</h3>
+
+<p>Swaps will auto-enable and disable themselves if the <code>maxWidth</code> property is set.</p>
+
+<p><code>javascript
+$(".target").swap({
+    maxWidth: "740px"
+});
+</code></p>
+
+<p>```markup</p>
+
+<div class="target" data-swap-target=".toggle">Toggle</div>
+
+
+<div class="toggle">Target</div>
+
+
+<p>```</p>

@@ -1,0 +1,19 @@
+<h3>Basic</h3>
+
+<p>Transition provides a predictable interface for moving to CSS based animations:</p>
+
+<p><code>javascript
+$(".target").transition(function() {
+    ...
+}).addClass("visible");
+</code></p>
+
+<h3>Resolve</h3>
+
+<p>Transitions can manually resolved, which will immediately fire the associated callback:</p>
+
+<p><code>javascript
+if (shouldResolve) {
+    $(".target").transition("resolve");
+}
+</code></p>

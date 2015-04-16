@@ -1,0 +1,103 @@
+<h3>Basic</h3>
+
+<p>Touch normalizes mouse and touch events in the context of a few basic gestures: <code>tap</code>, <code>pan</code>, <code>swipe</code> and <code>scale</code>. It is up to the developer to utilize the events. Events emitted by Touch will contain the following extra properties:</p>
+
+<table>
+<thead>
+<tr>
+<th> Key </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <code>pageX</code> </td>
+<td> Current X position </td>
+</tr>
+<tr>
+<td> <code>pageY</code> </td>
+<td> Current Y position </td>
+</tr>
+<tr>
+<td> <code>deltaX</code> </td>
+<td> Change in X position </td>
+</tr>
+<tr>
+<td> <code>deltaY</code> </td>
+<td> Change in Y position </td>
+</tr>
+<tr>
+<td> <code>scale</code> </td>
+<td> Current scale value </td>
+</tr>
+<tr>
+<td> <code>directionX</code> </td>
+<td> Current X movement </td>
+</tr>
+<tr>
+<td> <code>directionY</code> </td>
+<td> Current Y movement </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Tap</h3>
+
+<p>Tap creates a basic &lsquo;fast click&rsquo; event. This synthesizes the touch and click events allowing fast mobile UIs without interupting the user&rsquo;s scroll:</p>
+
+<p><code>javascript
+$(".target").touch({
+    tap: true
+}).on("tap", function(e) {
+    console.log("Tapped");
+});
+</code></p>
+
+<p>Note: <code>tap</code> can not be used in conjunction with <code>pan</code> or <code>scale</code>.</p>
+
+<h3>Pan</h3>
+
+<p>Pan can be used for building touch-friendly draggable interfaces:</p>
+
+<p><code>javascript
+$(".target").touch({
+    pan: true
+}).on("panstart", function(e) {
+    console.log("Started panning");
+}).on("pan", function(e) {
+    console.log("Panning");
+}).on("panend", function(e) {
+    console.log("Stopped panning");
+});
+</code></p>
+
+<h3>Swipe</h3>
+
+<p>Swipe can be used for building touch-friendly swipable interfaces:</p>
+
+<p><code>javascript
+$(".target").touch({
+    swipe: true
+}).on("swipe", function(e) {
+    console.log("Swiped");
+});
+</code></p>
+
+<h3>Scale</h3>
+
+<p>Scale can be used for building touch-friendly scalable interfaces:</p>
+
+<p><code>javascript
+$(".target").touch({
+    scale: true
+}).on("scalestart", function(e) {
+    console.log("Started scaling");
+}).on("scale", function(e) {
+    console.log("Scaling");
+}).on("scaleend", function(e) {
+    console.log("Stopped scaling");
+});
+</code></p>
+
+<p>Note: <code>pan</code>, <code>swipe</code> and <code>scale</code> can also be used together to create a rich interface.</p>

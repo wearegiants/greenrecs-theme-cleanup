@@ -1,0 +1,90 @@
+#home--wrapper {
+
+  > div {
+
+    min-height: 100px;
+
+  }
+
+}
+
+.testimonials {
+
+  .testimonial {
+
+    @media @xs {
+      padding: @spaced 0;
+      border-bottom: 1px solid @lighterGray;
+      text-align: left;
+    }
+
+    @media @desktop {
+      text-align: center;
+      padding: 0;
+      border-bottom: none
+    }
+
+    img {
+
+      box-shadow: 0 0 15px rgba(0,0,0,.15);
+
+      @media @xs {
+        display: block;
+        float: left;
+        margin-right: @spaced;
+        width: 80px;
+        height: 80px;
+      }
+
+      @media @mobile {
+        width: 100px;
+        height: 100px;
+      }
+
+      @media @tablet {
+        width: 110px;
+        height: 110px;
+      }
+
+      @media @desktop {
+        width: auto;
+        height: auto;
+        display: block;
+        margin: 0 auto @spaced/2;
+        float: none;
+      }
+
+    }
+
+  }
+
+}
+
+#home--legality {
+
+  padding: @spaced*3 0;
+  border-top: 1px solid @lighterGray;
+
+}
+
+#home--testimonials {
+
+  padding: @spaced*1.75 0;
+  border-top: 1px solid @lighterGray;
+  border-bottom: 1px solid @lighterGray;
+
+}
+
+#home--checkicon {
+
+  height: 0;
+  position: relative;
+
+  .icon {
+    pointer-events: none;
+    height: 95px;
+    width: 76px;
+    .center();
+  }
+
+}

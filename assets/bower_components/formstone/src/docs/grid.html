@@ -1,0 +1,627 @@
+<p>The grid works by nesting &lsquo;cells&rsquo; within &lsquo;rows&rsquo;. Cells are defined by classes that set widths at specific breakpoints. The breakpoints correspond to general screen sizes. By default, Grid renders 3 columns on &lsquo;small&rsquo;, 6 columns on &lsquo;medium&rsquo; and 12 columns on &lsquo;large&rsquo; displays.</p>
+
+<h3>Markup</h3>
+
+<p>A basic example may look something like:</p>
+
+<p><code>markup
+&lt;body class="fs-grid"&gt;
+    &lt;div class="fs-row"&gt;
+        &lt;div class="fs-cell fs-sm-3 fs-md-2 fs-lg-4"&gt;...&lt;/div&gt;
+        &lt;div class="fs-cell fs-sm-3 fs-md-2 fs-lg-4"&gt;...&lt;/div&gt;
+        &lt;div class="fs-cell fs-sm-3 fs-md-2 fs-lg-4"&gt;...&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+</code></p>
+
+<p>This will create 3 cells that each span 3 columns on &lsquo;small&rsquo;, 2 columns on &lsquo;medium&rsquo; and 4 columns on &lsquo;large&rsquo; screens. Think of the nested structure like a directory tree:</p>
+
+<p><code>
+grid
+├─ row
+|  ├─ cell
+|  |─ cell
+|  |  └─ row
+|  |     ├─ cell
+|  |     └─ cell
+|  └─ cell
+└─ row
+   ├─ cell
+   └─ cell
+</code></p>
+
+<h3>Box-Sizing</h3>
+
+<p>Grid relies on border-box and includes a global box-sizing reset:</p>
+
+<p><code>css
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+</code></p>
+
+<p>This will effect every element on the page and can have unexpected results. In the long run it will help speed development by modifying how padding and borders effect the box model calculations. <a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">Learn more about border-box</a>.</p>
+
+<h3>Row Widths and Columns Counts</h3>
+
+<table>
+<thead>
+<tr>
+<th> Name </th>
+<th> Screen Size </th>
+<th> Row Width </th>
+<th> Column Count </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <code>xs</code> </td>
+<td> smaller than 500px </td>
+<td> 300px </td>
+<td> 3 </td>
+</tr>
+<tr>
+<td> <code>sm</code> </td>
+<td> smaller than 740px </td>
+<td> 480px </td>
+<td> 3 </td>
+</tr>
+<tr>
+<td> <code>md</code> </td>
+<td> 740px to 960px </td>
+<td> 720px </td>
+<td> 6 </td>
+</tr>
+<tr>
+<td> <code>lg</code> </td>
+<td> 960px to 1220px </td>
+<td> 960px </td>
+<td> 12 </td>
+</tr>
+<tr>
+<td> <code>xl</code> </td>
+<td> larger than 1220px </td>
+<td> 1200px </td>
+<td> 12 </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Defining Cells</h3>
+
+<table>
+<thead>
+<tr>
+<th> Class </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <code>xs-X</code> </td>
+<td> only extra small size </td>
+</tr>
+<tr>
+<td> <code>sm-X</code> </td>
+<td> both small and extra small sizes </td>
+</tr>
+<tr>
+<td> <code>md-X</code> </td>
+<td> medium size </td>
+</tr>
+<tr>
+<td> <code>lg-X</code> </td>
+<td> both large and extra large sizes </td>
+</tr>
+<tr>
+<td> <code>xl-X</code> </td>
+<td> only extra large size </td>
+</tr>
+<tr>
+<td> <code>all-X</code> </td>
+<td> all sizes </td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Cells will default to filling the available horizontal space but can be defined by the target screen size and column count. For example <code>fs-sm-2</code> will produce a cell spanning 2 of the 3 available columns within the &lsquo;small&rsquo; screen size range. Cell classes can be stacked to specify column spans across all screen sizes:</p>
+
+<p>```markup</p>
+
+<div class="fs-cell fs-sm-3 fs-md-6 fs-lg-12">...</div>
+
+
+<p>```</p>
+
+<p>The <code>fs-xl-X</code> and <code>fs-xs-X</code> classes adds level of control when targeting large and small screens. For example, a cell may need to span 2 columns at the small size, but span the full width at the extra small size:</p>
+
+<p>```markup</p>
+
+<div class="fs-cell fs-xs-3 fs-sm-2 ...">...</div>
+
+
+<p>```</p>
+
+<p>The <code>fs-all-X</code> classes will create a cell that spans the specified width on all screen sizes (only works with fraction cell counts):</p>
+
+<p>```markup</p>
+
+<div class="fs-cell fs-all-third">...</div>
+
+
+<p>```</p>
+
+<h3>Fraction Cells</h3>
+
+<p>The fraction classes can be used in place of specific column counts:</p>
+
+<table>
+<thead>
+<tr>
+<th> Class </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <code>fs-X-full</code> </td>
+<td> entire row width </td>
+</tr>
+<tr>
+<td> <code>fs-X-half</code> </td>
+<td> &frac12; row width </td>
+</tr>
+<tr>
+<td> <code>fs-X-third</code> </td>
+<td> 1/3 row width </td>
+</tr>
+<tr>
+<td> <code>fs-X-fourth</code> </td>
+<td> &frac14; row width </td>
+</tr>
+<tr>
+<td> <code>fs-X-fifth</code> </td>
+<td> 1/5 row width </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Hidden Cells</h3>
+
+<p>To hide cells at specific screen sizes:</p>
+
+<table>
+<thead>
+<tr>
+<th> Class </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <code>fs-xs-hide</code> </td>
+<td> Hide on extra small </td>
+</tr>
+<tr>
+<td> <code>fs-sm-hide</code> </td>
+<td> Hide on small </td>
+</tr>
+<tr>
+<td> <code>fs-md-hide</code> </td>
+<td> Hide on medium </td>
+</tr>
+<tr>
+<td> <code>fs-lg-hide</code> </td>
+<td> Hide on large </td>
+</tr>
+<tr>
+<td> <code>fs-xl-hide</code> </td>
+<td> Hide on extra large </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>Helper Classes</h3>
+
+<p>Helper classes can be added to cells to modify their default behavior in predictable ways.</p>
+
+<table>
+<thead>
+<tr>
+<th> Class </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <code>fs-padded</code> </td>
+<td> Swaps cell margin for padding. Allows backgrounds to touch while maintaining gutters. </td>
+</tr>
+<tr>
+<td> <code>fs-contained</code> </td>
+<td> Removes cell margin. Allows backgrounds to touch by removing gutters. </td>
+</tr>
+<tr>
+<td> <code>fs-centered</code> </td>
+<td> Centers cell. Useful for centering odd column count cells. </td>
+</tr>
+<tr>
+<td> <code>fs-right</code> </td>
+<td> Right aligns cell. Useful for changing document flow on different device sizes. </td>
+</tr>
+</tbody>
+</table>
+
+
+<h3>LESS Configuration</h3>
+
+<p>Grid can also be configured and rebuilt using Grunt. Simply edit the variables found in <code>/src/grid/grid-config.less</code> before running the default <code>grunt</code> process.</p>
+
+<table>
+<thead>
+<tr>
+<th> Variable </th>
+<th> Default </th>
+<th> Description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <strong>Structure</strong> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-class-container</code> </td>
+<td> <code>fs-grid</code> </td>
+<td> Container class </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-class-row</code> </td>
+<td> <code>fs-row</code> </td>
+<td> Row class </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-class-contained</code> </td>
+<td> <code>fs-contained</code> </td>
+<td> Contained helper class </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-class-padded</code> </td>
+<td> <code>fs-padded</code> </td>
+<td> Padded helper class </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-class-centered</code> </td>
+<td> <code>fs-centered</code> </td>
+<td> Centered helper class </td>
+</tr>
+<tr>
+<td> <strong>Cells</strong> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-class-all</code> </td>
+<td> <code>fs-all</code> </td>
+<td> All cell class </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-class-xs</code> </td>
+<td> <code>fs-xs</code> </td>
+<td> Extra Small cell class </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-class-sm</code> </td>
+<td> <code>fs-sm</code> </td>
+<td> Small cell class </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-class-md</code> </td>
+<td> <code>fs-md</code> </td>
+<td> Medium cell class </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-class-lg</code> </td>
+<td> <code>fs-lg</code> </td>
+<td> Large cell class </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-class-xl</code> </td>
+<td> <code>fs-xl</code> </td>
+<td> Extra Large cell class </td>
+</tr>
+<tr>
+<td> <strong>Columns</strong> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-columns-sm</code> </td>
+<td> <code>3</code> </td>
+<td> Small column count </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-columns-md</code> </td>
+<td> <code>6</code> </td>
+<td> Medium column count </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-columns-lg</code> </td>
+<td> <code>12</code> </td>
+<td> Large column count </td>
+</tr>
+<tr>
+<td> <strong>Gutters</strong> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-gutter</code> </td>
+<td> <code>1.0416666666666667%;</code> </td>
+<td> Gutter width </td>
+</tr>
+<tr>
+<td> <strong>Widths</strong> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-width-xs</code> </td>
+<td> <code>300px</code> </td>
+<td> Extra Small row width </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-width-sm</code> </td>
+<td> <code>480px</code> </td>
+<td> Small row width </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-width-md</code> </td>
+<td> <code>720px</code> </td>
+<td> Medium row width </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-width-lg</code> </td>
+<td> <code>960px</code> </td>
+<td> Large row width </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-width-xl</code> </td>
+<td> <code>1200px</code> </td>
+<td> Extra Large row width </td>
+</tr>
+<tr>
+<td> <strong>Breakpoints</strong> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-width-break-xs</code> </td>
+<td> <code>320px</code> </td>
+<td> Extra Small break width </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-width-break-sm</code> </td>
+<td> <code>500px</code> </td>
+<td> Small break width </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-width-break-md</code> </td>
+<td> <code>740px</code> </td>
+<td> Medium break width </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-width-break-lg</code> </td>
+<td> <code>980px</code> </td>
+<td> Large break width </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-width-break-xl</code> </td>
+<td> <code>1220px</code> </td>
+<td> Extra Large break width </td>
+</tr>
+<tr>
+<td> <strong>Media Queries - Max</strong> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-mq-max-sm</code> </td>
+<td> <code>499px</code> </td>
+<td> Small max mq </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-mq-max-md</code> </td>
+<td> <code>739px</code> </td>
+<td> Medium max mq </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-mq-max-lg</code> </td>
+<td> <code>979px</code> </td>
+<td> Large max mq </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-mq-max-xl</code> </td>
+<td> <code>1219px</code> </td>
+<td> Extra Large max mq </td>
+</tr>
+<tr>
+<td> <strong>Media Queries - Min</strong> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-mq-min-sm</code> </td>
+<td> <code>500px</code> </td>
+<td> Small min mq </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-mq-min-md</code> </td>
+<td> <code>740px</code> </td>
+<td> Medium min mq </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-mq-min-lg</code> </td>
+<td> <code>980px</code> </td>
+<td> Large min mq </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-mq-min-xl</code> </td>
+<td> <code>1220px</code> </td>
+<td> Extra Large min mq </td>
+</tr>
+<tr>
+<td> <strong>Mixin-Only Grid</strong> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> <code>@fs-grid-mixin-only</code> </td>
+<td> <code>false</code> </td>
+<td> Disables generation of classes based grid </td>
+</tr>
+<tr>
+<td> <strong>Extendable Classes</strong> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> <code>.fs_grid_row</code> </td>
+<td> </td>
+<td> Base row </td>
+</tr>
+<tr>
+<td> <code>.fs_grid_row_fluid</code> </td>
+<td> </td>
+<td> Base fluid row </td>
+</tr>
+<tr>
+<td> <code>.fs_grid_row_fluid_sm</code> </td>
+<td> </td>
+<td> Base fluid row (small only) </td>
+</tr>
+<tr>
+<td> <code>.fs_grid_row_row</code> </td>
+<td> </td>
+<td> Base nested row </td>
+</tr>
+<tr>
+<td> <code>.fs_grid_row_row_contained</code> </td>
+<td> </td>
+<td> Base nested row (parent cell is contained) </td>
+</tr>
+<tr>
+<td> <code>.fs_grid_cell</code> </td>
+<td> </td>
+<td> Base cell </td>
+</tr>
+<tr>
+<td> <code>.fs_grid_cell_centered</code> </td>
+<td> </td>
+<td> Base centered cell </td>
+</tr>
+<tr>
+<td> <code>.fs_grid_cell_padded</code> </td>
+<td> </td>
+<td> Base padded cell </td>
+</tr>
+<tr>
+<td> <code>.fs_grid_cell_contained</code> </td>
+<td> </td>
+<td> Base contained cell </td>
+</tr>
+<tr>
+<td> <code>.fs_grid_cell_right</code> </td>
+<td> </td>
+<td> Base right cell </td>
+</tr>
+<tr>
+<td> <strong>Mixins</strong> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> <code>.fs_row();</code> </td>
+<td> </td>
+<td> Base row </td>
+</tr>
+<tr>
+<td> <code>.fs_row_fluid();</code> </td>
+<td> </td>
+<td> Base row fluid </td>
+</tr>
+<tr>
+<td> <code>.fs_row_fluid_sm();</code> </td>
+<td> </td>
+<td> Base fluid row (small only) </td>
+</tr>
+<tr>
+<td> <code>.fs_row_row();</code> </td>
+<td> </td>
+<td> Base nested row </td>
+</tr>
+<tr>
+<td> <code>.fs_row_row_contained();</code> </td>
+<td> </td>
+<td> Base nested row (parent cell is contained) </td>
+</tr>
+<tr>
+<td> <code>.fs_cell();</code> </td>
+<td> </td>
+<td> Base cell </td>
+</tr>
+<tr>
+<td> <code>.fs_cell_centered();</code> </td>
+<td> </td>
+<td> Base centered cell </td>
+</tr>
+<tr>
+<td> <code>.fs_cell_padded();</code> </td>
+<td> </td>
+<td> Base padded cell </td>
+</tr>
+<tr>
+<td> <code>.fs_cell_contained();</code> </td>
+<td> </td>
+<td> Base contained cell </td>
+</tr>
+<tr>
+<td> <code>.fs_cell_right();</code> </td>
+<td> </td>
+<td> Base right cell </td>
+</tr>
+<tr>
+<td> <code>.fs_cell_xs(@count [, @total]);</code> </td>
+<td> </td>
+<td> Extra Small cell; Pass @total to define fractions </td>
+</tr>
+<tr>
+<td> <code>.fs_cell_sm(@count [, @total]);</code> </td>
+<td> </td>
+<td> Small cell; Pass @total to define fractions </td>
+</tr>
+<tr>
+<td> <code>.fs_cell_md(@count [, @total]);</code> </td>
+<td> </td>
+<td> Medium cell; Pass @total to define fractions </td>
+</tr>
+<tr>
+<td> <code>.fs_cell_lg(@count [, @total]);</code> </td>
+<td> </td>
+<td> Large cell; Pass @total to define fractions </td>
+</tr>
+<tr>
+<td> <code>.fs_cell_xl(@count [, @total]);</code> </td>
+<td> </td>
+<td> Extra Large cell; Pass @total to define fractions </td>
+</tr>
+</tbody>
+</table>
+

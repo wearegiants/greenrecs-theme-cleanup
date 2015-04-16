@@ -1,0 +1,31 @@
+<h3>Basic</h3>
+
+<p>To customize a select element, simply apply the plugin to the target element:</p>
+
+<p><code>javascript
+$("select").dropdown();
+</code></p>
+
+<p><code>markup
+&lt;select&gt;
+    &lt;option value="1"&gt;One&lt;/option&gt;
+    &lt;option value="2"&gt;Two&lt;/option&gt;
+    &lt;option value="3"&gt;Three&lt;/option&gt;
+&lt;/select&gt;
+</code></p>
+
+<h3>Events</h3>
+
+<p>React to changes to the element&rsquo;s value by listening for the standard <code>change</code> event:</p>
+
+<p><code>javascript
+$("select").on("change", function() {
+    var value = $(this).val();
+});
+</code></p>
+
+<p>Updated the element&rsquo;s value externally by triggering the standard <code>change</code> event:</p>
+
+<p><code>javascript
+$("select").val(1).trigger("change");
+</code></p>

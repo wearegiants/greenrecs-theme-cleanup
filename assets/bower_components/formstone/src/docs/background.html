@@ -1,0 +1,59 @@
+<h3>Basic</h3>
+
+<p>Create a new Background by passing the source image URL at initialization:</p>
+
+<p><code>javascript
+$(".target").background({
+    source: "http://example.com/image.jpg"
+});
+</code></p>
+
+<p>```markup</p>
+
+<div class="target">
+    ...
+</div>
+
+
+<p>```</p>
+
+<h3>Responsive</h3>
+
+<p>Create a responsive-friendly Background by defining key/value pairs containing the <code>min-width</code> image URLs:</p>
+
+<p><code>javascript
+$(".target").background({
+    source: {
+        "0px": "http://example.com/image-small.jpg",
+        "980px": "http://example.com/image-large.jpg"
+    }
+});
+</code></p>
+
+<h3>HTML5 Video</h3>
+
+<p>Create a video Background by defining proper browser-specific source video URLs, as well as a poster image URL:</p>
+
+<p><code>javascript
+$(".target").background({
+    source: {
+        poster: "http://example.com/poster.jpg",
+        webm: "http://example.com/video.webm",
+        mp4: "http://example.com/video.mp4",
+        ogg: "http://example.com/video.ogv"
+    }
+});
+</code></p>
+
+<h3>YouTube Video</h3>
+
+<p>Create a YouTube video Background by passing the YouTube embed URL as the source. If you do not define a poster, the YouTube thumbnail will be used:</p>
+
+<p><code>javascript
+$(".target").background({
+    source: {
+        poster: "http://example.com/poster.jpg",
+        video: "//www.youtube.com/embed/VIDEO_ID"
+    }
+});
+</code></p>

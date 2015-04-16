@@ -1,0 +1,42 @@
+<h3>Basic</h3>
+
+<p>Display images and videos in an overlay:</p>
+
+<p><code>javascript
+$("a").lightbox();
+</code></p>
+
+<p><code>markup
+&lt;a href="one.jpg" title="Image Caption"&gt;
+    &lt;img src="one_thumb.jpg" alt=""&gt;
+&lt;/a&gt;
+</code></p>
+
+<h3>Gallery</h3>
+
+<p>Link multiple images or videos together with the <code>data-lightbox-gallery</code> attribute:</p>
+
+<p><code>markup
+&lt;a href="one.jpg" title="Image Caption One" data-lightbox-gallery="photo_gallery"&gt;
+    &lt;img src="one_thumb.jpg" alt=""&gt;
+&lt;/a&gt;
+&lt;a href="two.jpg" title="Image Caption Two" data-lightbox-gallery="photo_gallery"&gt;
+    &lt;img src="two_thumb.jpg" alt=""&gt;
+&lt;/a&gt;
+&lt;a href="three.jpg" title="Image Caption Three" data-lightbox-gallery="photo_gallery"&gt;
+    &lt;img src="three_thumb.jpg" alt=""&gt;
+&lt;/a&gt;
+</code></p>
+
+<h3>Events</h3>
+
+
+<p>React to the lightbox by listening for the <code>open.lightbox</code> and <code>close.lightbox</code> events on the <code>window</code>:</p>
+
+<p><code>javascript
+$(window).on("open.lightbox", function() {
+    // ...
+}).on("close.lightbox", function() {
+    // ...
+});
+</code></p>

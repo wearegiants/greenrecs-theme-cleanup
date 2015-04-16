@@ -1,0 +1,69 @@
+<h3>Basic</h3>
+
+<p>Navigation will automatically turn a basic navigation into a mobile friendly system. Links can be styled independently:</p>
+
+<p><code>javascript
+$("nav").navigation();
+</code></p>
+
+<p>```markup</p>
+
+<h4 id="handle">Navigation</h4>
+
+
+<p><nav data-navigation-handle="#handle">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</nav>
+```</p>
+
+<h3>Breakpoint</h3>
+
+<p>By default, Navigation will enable itself on screens smaller then 980 pixels wide. Specify a different width by setting the <code>maxWidth</code> option on initialization.</p>
+
+<p><code>javascript
+$("nav").navigation({
+    maxWidth: "740px"
+});
+</code></p>
+
+<h3>Slide Out</h3>
+
+<p>Navigation can also slide out from the left or right hand side of the screen. The nav can &lsquo;push&rsquo; the main page content by specifying the <code>data-navigation-content</code> attribute:</p>
+
+<p><code>javascript
+$("nav").navigation();
+</code></p>
+
+<p>```markup</p>
+
+<h4 id="handle">Navigation</h4>
+
+
+<p><nav data-navigation-handle="#handle" data-navigation-content="#content">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</nav></p>
+
+<p><div id="content">
+    &hellip;
+</nav>
+```</p>
+
+<p><h3>Events</h3></p>
+
+<p>React to the navigation by listening for the <code>open.navigation</code> and <code>close.navigation</code> events:</p>
+
+<p><code>javascript
+$("nav").on("open.navigation", function() {
+    // ...
+}).on("close.navigation", function() {
+    // ...
+});
+</code></p>
+
+<h3>IE Support</h3>
+
+<p>When supporting IE, a <a href="https://gist.github.com/benplum/8045366">HTML5 enabler</a> and matchMedia polyfill (<a href="https://gist.github.com/benplum/8045336">IE 8</a>, <a href="https://gist.github.com/benplum/8045327">IE 9</a>) are required.</p>

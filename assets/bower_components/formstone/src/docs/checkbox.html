@@ -1,0 +1,28 @@
+<h3>Basic</h3>
+
+<p>Checkbox will automatically detect the input&rsquo;s type and render proper styles.</p>
+
+<p><code>javascript
+$("input[type=checkbox], input[type=radio]").checkbox();
+</code></p>
+
+<p><code>markup
+&lt;fieldset&gt;
+    &lt;label for="check_1"&gt;Checkbox&lt;/label&gt;
+    &lt;input type="checkbox" name="check_1" id="check_1" value="on"&gt;
+&lt;/fieldset&gt;
+&lt;fieldset&gt;
+    &lt;label for="radio_1"&gt;Radio&lt;/label&gt;
+    &lt;input type="radio" name="radio_1" id="radio_1" value="on"&gt;
+&lt;/fieldset&gt;
+</code></p>
+
+<h3>Toggle</h3>
+
+<p>Checkbox can also render a &lsquo;toggle&rsquo; style checkbox.</p>
+
+<p><code>javascript
+$("input[type=checkbox]").checkbox({
+    toggle: true
+});
+</code></p>
