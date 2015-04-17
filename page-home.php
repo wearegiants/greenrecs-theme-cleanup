@@ -95,7 +95,7 @@
             <h4 class="green">HIPAA COMPLIANT – PRIVACY SECURED</h4>
             <p>Protecting your private and personal medical information is our primary focus at all times. GreenRecs is HIPAA (Health Insurance Portability & Accountability Act) compliant. We do NOT share information, keep state or government records and records can only be released with a patient’s written consent.</p>
           </div>
-          <hr class="thin fs-cell fs-lg-10 fs-md-6 fs-sm-3 fs-centered">
+          <hr class="thin fs-cell fs-lg-12 fs-md-6 fs-sm-3 fs-centered">
           <div class="fs-cell fs-lg-12 fs-md-6 fs-sm-3 text-center">
             <i class="icon secure"></i>
             <h4 class="green">VIRTUAL APPOINTMENTS</h4>

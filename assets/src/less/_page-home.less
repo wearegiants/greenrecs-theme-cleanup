@@ -1,11 +1,5 @@
 #home--wrapper {
 
-  > div {
-
-    min-height: 100px;
-
-  }
-
   h2 {
 
     margin-bottom: @spaced*1.25;
@@ -255,7 +249,8 @@
 
 #home--checkicon {
 
-  height: 0;
+  height: 0px;
+  max-height: 0px;
   position: relative;
 
   .fs-cell {
@@ -266,7 +261,6 @@
 
     height: 95px;
     width: 76px;
-    position: relative;
 
     @media @xs {
       .center();
