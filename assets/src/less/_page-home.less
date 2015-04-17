@@ -6,6 +6,12 @@
 
   }
 
+  h2 {
+
+    margin-bottom: @spaced*1.25;
+
+  }
+
 }
 
 .testimonials {
@@ -16,6 +22,9 @@
       padding: @spaced 0;
       border-bottom: 1px solid @lighterGray;
       text-align: left;
+      &:last-child {
+        border-bottom: 0;
+      }
     }
 
     @media @desktop {
@@ -60,10 +69,179 @@
 
 }
 
+#home--schedule {
+
+  position: relative;
+  z-index: 2;
+
+  @media @xs {
+    padding: @spaced*1.75 0;
+  }
+  @media @desktop {
+    padding: @spaced*2.25 0;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+    margin-top: 0;
+    line-height: 1.3;
+    @media @xs {
+      br {
+        display: none;
+      }
+    }
+    @media @desktop {
+      br {
+        display: block;
+      }
+    }
+  }
+
+  .icon {
+
+    @media @xs {
+      width: 50px;
+      display: none;
+    }
+    @media @mobile {
+      width: 70px;
+      display: block;
+    }
+    @media @desktop {
+      width: 70px;
+    }
+
+  }
+
+}
+
+#home--physicians {
+
+  border-bottom: 10px solid @green;
+  box-shadow: 0 5px 10px rgba(0,0,0,.15);
+  position: relative;
+  z-index: 1;
+  background: url(/assets/img/physician-bg.jpg) center center no-repeat;
+  background-size: cover;
+
+
+  @media @xs {
+    padding: @spaced*1.75 0;
+  }
+  @media @desktop {
+    padding: @spaced*3.5 0;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  i {
+    color: @green;
+  }
+
+  ul {
+
+    margin-bottom: 0;
+    padding: 0;
+
+    li {
+
+      @media @xs {
+        display: block;
+        margin: 0;
+      }
+
+      &:before {
+        display: none;
+      }
+
+    }
+
+  }
+
+}
+
+#home--howitworks {
+
+  @media @xs {
+    padding-bottom: @spaced*3;
+  }
+
+  @media @mobile {
+
+    padding: @spaced*3 0;
+
+  }
+
+  .fs-cell {
+
+    @media @xs {
+      padding: @spaced 0;
+      text-align: left;
+      border-bottom: 1px solid @lighterGray;
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    @media @tablet {
+      text-align: left;
+    }
+
+    @media @desktop {
+      padding: 0;
+      text-align: center;
+      border: none;
+    }
+
+  }
+
+  .icon {
+
+    @media @xs {
+      float: left;
+      margin-bottom: 00px;
+      margin-right: 10px;
+      margin-top: -8px;
+      width: 40px;
+    }
+
+    @media @tablet {
+      float: left;
+      margin-top: 0;
+      width: auto;
+      height: auto;
+      margin-right: @spaced;
+      margin-bottom: 0;
+    }
+
+    @media @desktop {
+      float: none;
+      margin-bottom: 20px;
+    }
+
+    img {
+
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(0,0,0,.05);
+
+      @media @xs {
+        margin: auto;
+      }
+
+    }
+
+  }
+
+}
+
 #home--legality {
 
   padding: @spaced*3 0;
   border-top: 1px solid @lighterGray;
+
+
 
 }
 
@@ -80,11 +258,40 @@
   height: 0;
   position: relative;
 
+  .fs-cell {
+    position: relative;
+  }
+
   .icon {
-    pointer-events: none;
+
     height: 95px;
     width: 76px;
-    .center();
+    position: relative;
+
+    @media @xs {
+      .center();
+    }
+
+    @media @mobile {
+      left: 0%;
+      position: absolute;
+      top: 50%;
+      transform: translate( 0%, -50%);
+      left: 0;
+    }
+
+    @media @tablet {
+      left: 0%;
+      position: absolute;
+      top: 50%;
+      transform: translate( 0%, -50%);
+      left: 0;
+    }
+
+    @media @desktop {
+      .center();
+    }
+
   }
 
 }

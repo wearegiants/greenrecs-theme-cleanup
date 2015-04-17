@@ -8,52 +8,59 @@
     <div class="fs-row">
       <div class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered">
         <div class="fs-row">
-          <div class="fs-cell fs-lg-6 fs-md-3 fs-sm-3">
-            <i class="icon doctor alignleft"></i>
-            <h3>Sign Up And Schedule An Appointment</h3>
-            <p>Sign up and choose a date and time that works best for you. Our average appointment time is about 15-30 minutes.</p>
+          <div class="fs-cell fs-lg-5 fs-md-6 fs-sm-3 fs-right">
+            <button class="btn big btn-lg wide cta ss-gizmo ss-navigateright">Reserve your recommendation</button>
           </div>
-          <div class="fs-cell fs-lg-5 fs-md-3 fs-sm-3 fs-right">
-            <button class="btn big btn-primary wide">Reserve your recommendation</button>
+          <hr class="invisible fs-lg-hide fs-md-6 fs-sm-3 fs-left">
+          <div class="fs-cell fs-lg-6 fs-md-6 fs-sm-3 fs-left">
+            <div class="icon doctor left"><img src="/assets/img/doctor.png" class="img-responsive" /></div>
+            <h2>Sign Up and Schedule <br>An Appointment</h2>
+            <p>Sign up and choose a date and time that works best for you. Our average appointment time is about 15-30 minutes.</p>
           </div>
         </div>
       </div>
+    </div>
   </div><!-- Schedule -->
 
   <div id="home--physicians" class="bg lightgray">
     <div class="fs-row">
-      <div class="fs-cell fs-lg-5 fs-md-4 fs-sm-3 fs-right text-center">
-        <h3>Our Physicians</h3>
-        <p>Our team of physicians schedule an hour or so each day to take time out of their practices so they can come directly to you.</p>
-        <p><strong>EVERY PHYSICIAN IS:</strong></p>
-        <ul>
-          <li><i class="ss-icon ss-gizmo green">check</i> Is Board Certified by the State of California</li>
-          <li><i class="ss-icon ss-gizmo green">check</i> Has a current medical license in good standing</li>
-          <li><i class="ss-icon ss-gizmo green">check</i> Is educated on cannabis use for medicinal purposes</li>
-        </ul>
+      <div class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered">
+        <div class="fs-row">
+          <div class="fs-cell fs-lg-6 fs-md-6 fs-sm-3 fs-right text-center">
+            <h2>Our Physicians</h2>
+            <p>Our team of physicians schedule an hour or so each day to take time out of their practices so they can come directly to you.</p>
+            <p><strong><small>EVERY PHYSICIAN IS:</small></strong></p>
+            <ul>
+              <li><i class="ss-icon ss-gizmo green">check</i> Is Board Certified by the State of California</li>
+              <li><i class="ss-icon ss-gizmo green">check</i> Has a current medical license in good standing</li>
+              <li><i class="ss-icon ss-gizmo green">check</i> Is educated on cannabis use for medicinal purposes</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div><!-- Our Physicians -->
 
   <div id="home--howitworks" class="bg lightgray">
     <div class="fs-row">
+      <header class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered text-center"><h2>How it Works</h2></header>
       <div class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered">
         <div class="fs-row">
 
-          <div class="fs-cell fs-lg-4 fs-md-2 fs-sm-3 text-center">
-            <i class="icon book"></i>
+          <div class="fs-cell fs-lg-4 fs-md-6 fs-sm-3 text-center">
+            <div class="icon book"><img src="/assets/img/howitworks-book.png" class="img-responsive" /></div>
             <h4>1. BOOK</h4>
             <p>Our trusted team of physicians are available 7-days a week from 8am – 8pm PST.</p>
           </div>
 
-          <div class="fs-cell fs-lg-4 fs-md-2 fs-sm-3 text-center">
-            <i class="icon meet"></i>
+          <div class="fs-cell fs-lg-4 fs-md-6 fs-sm-3 text-center">
+            <div class="icon meet"><img src="/assets/img/howitworks-meet.png" class="img-responsive" /></div>
             <h4>1. MEET</h4>
             <p>Skip the traditional doctor’s office, get comfortable and see one of our experienced physicians via online video-conference from your home or office.</p>
           </div>
 
-          <div class="fs-cell fs-lg-4 fs-md-2 fs-sm-3 text-center">
-            <i class="icon deliver"></i>
+          <div class="fs-cell fs-lg-4 fs-md-6 fs-sm-3 text-center">
+            <div class="icon deliver"><img src="/assets/img/howitworks-deliver.png" class="img-responsive" /></div>
             <h4>1. DELIVER</h4>
             <p>Sit back and relax, your card will be arriving in the mail within two to three business days.</p>
           </div>
@@ -63,7 +70,13 @@
     </div>
   </div><!-- How it Works -->
 
-  <div id="home--checkicon"><span class="icon check"><img src="/assets/img/how-it-works-check.png" class="img-responsive" /></span></div><!-- Check Divider -->
+  <div id="home--checkicon">
+    <div class="fs-row">
+      <div class="fs-cell fs-lg-12 fs-md-6 fs-sm-3">
+        <span class="icon check"><img src="/assets/img/how-it-works-check.png" class="img-responsive" /></span>
+      </div>
+    </div>
+  </div><!-- Check Divider -->
 
   <div id="home--legality">
     <div class="fs-row">
@@ -82,7 +95,7 @@
             <h4 class="green">HIPAA COMPLIANT – PRIVACY SECURED</h4>
             <p>Protecting your private and personal medical information is our primary focus at all times. GreenRecs is HIPAA (Health Insurance Portability & Accountability Act) compliant. We do NOT share information, keep state or government records and records can only be released with a patient’s written consent.</p>
           </div>
-          <hr class="thin fs-cell fs-lg-12 fs-md-6 fs-sm-3 ">
+          <hr class="thin fs-cell fs-lg-10 fs-md-6 fs-sm-3 fs-centered">
           <div class="fs-cell fs-lg-12 fs-md-6 fs-sm-3 text-center">
             <i class="icon secure"></i>
             <h4 class="green">VIRTUAL APPOINTMENTS</h4>
