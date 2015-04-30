@@ -14,7 +14,7 @@
           <hr class="invisible fs-lg-hide fs-md-6 fs-sm-3 fs-left">
           <div class="fs-cell fs-lg-6 fs-md-6 fs-sm-3 fs-left">
             <div class="icon doctor left"><img src="/assets/img/doctor.png" class="img-responsive" /></div>
-            <h2>Sign Up and Schedule <br>An Appointment</h2>
+            <h2><?php the_field('title_signup');?></h2>
             <p>Sign up and choose a date and time that works best for you. Our average appointment time is about 15-30 minutes.</p>
           </div>
         </div>
@@ -26,8 +26,8 @@
     <div class="fs-row">
       <div class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered">
         <div class="fs-row">
-          <div class="fs-cell fs-lg-6 fs-md-6 fs-sm-3 fs-right text-center">
-            <h2>Our Physicians</h2>
+          <div class="fs-cell fs-lg-6 fs-md-4 fs-sm-3 fs-right text-center">
+            <h2><?php the_field('title_physicians');?></h2>
             <p>Our team of physicians schedule an hour or so each day to take time out of their practices so they can come directly to you.</p>
             <p><strong><small>EVERY PHYSICIAN IS:</small></strong></p>
             <ul>
@@ -43,7 +43,7 @@
 
   <div id="home--howitworks" class="bg lightgray">
     <div class="fs-row">
-      <header class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered text-center"><h2>How it Works</h2></header>
+      <header class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered text-center"><h2><?php the_field('title_howitworks');?></h2></header>
       <div class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered">
         <div class="fs-row">
 
@@ -80,24 +80,24 @@
 
   <div id="home--legality">
     <div class="fs-row">
-      <header class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered text-center"><h2>Yes, this is legal.</h2></header>
+      <header class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered text-center"><h2><?php the_field('title_legal');?></h2></header>
       <div class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered">
         <div class="fs-row">
           <div class="fs-cell fs-lg-5 fs-md-6 fs-sm-3 sizer-item">
-            <i class="icon check"></i>
+            <div class="icon check"><img src="/assets/img/senate.png" /></div>
             <h4 class="green">IT PASSED THE STATE SENATE</h4>
             <p>California Senate Bill 420 (no, that’s not a joke), otherwise known as The Medical Marijuana Program Act, was a bill passed by the California State Legislature in 2003 that mandated a voluntary program for the issuance of identification cards to qualified patients.</p>
           </div>
           <div class="fs-cell fs-lg-2 fs-md-hide fs-sm-hide"><div class="vertical divider sizer-item"></div></div>
           <hr class="thin fs-cell fs-lg-hide fs-md-6 fs-sm-3 ">
           <div class="fs-cell fs-lg-5 fs-md-6 fs-sm-3 sizer-item  text-right">
-            <i class="icon secure"></i>
+            <div class="icon check"><img src="/assets/img/security.png" /></div>
             <h4 class="green">HIPAA COMPLIANT – PRIVACY SECURED</h4>
             <p>Protecting your private and personal medical information is our primary focus at all times. GreenRecs is HIPAA (Health Insurance Portability & Accountability Act) compliant. We do NOT share information, keep state or government records and records can only be released with a patient’s written consent.</p>
           </div>
           <hr class="thin fs-cell fs-lg-12 fs-md-6 fs-sm-3 fs-centered">
           <div class="fs-cell fs-lg-12 fs-md-6 fs-sm-3 text-center">
-            <i class="icon secure"></i>
+            <div class="icon check"><img src="/assets/img/virtual.png" /></div>
             <h4 class="green">VIRTUAL APPOINTMENTS</h4>
             <p>Telemedicine, originally developed by NASA in the 60s to help treat astronauts in space, allows doctors to diagnose and treat patients remotely and is now one of the most significantly growing mainstream industries in healthcare.All you need to do is offer the proper verification documents and we’re good to go.</p>
           </div>
@@ -137,23 +137,24 @@
 
   <div id="home--faq" class="faq">
     <div class="fs-row">
-      <div class="fs-cell fs-lg-11 fs-md-6 fs-sm-3">
+      <header class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered text-center"><h2><?php the_field('title_faq'); ?></h2></header>
+      <div class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered">
         <div class="fs-row">
 
           <div class="faq-item fs-cell fs-lg-4 fs-md-6 fs-sm-3 text-center">
-            <a href="/faq">How do I know if I qualify for a Medical Marijuana Rec (MMR)?</a>
+            <h2><a href="/faq">How do I know if I qualify for a Medical Marijuana Rec (MMR)?</a></h2>
           </div>
 
           <div class="faq-item fs-cell fs-lg-4 fs-md-6 fs-sm-3 text-center">
-            <a href="/faq">What “serious” medical condition(s) do I need to have to qualify for a MMR?</a>
+            <h2><a href="/faq">What “serious” medical condition(s) do I need to have to qualify for a MMR?</a></h2>
           </div>
 
           <div class="faq-item fs-cell fs-lg-4 fs-md-6 fs-sm-3 text-center">
-            <a href="/faq">How long will it take to get my GreenRecs MMR?</a>
+            <h2><a href="/faq">How long will it take to get my GreenRecs MMR?</a></h2>
           </div>
 
           <div class="fs-cell fs-lg-12 fs-md-6 fs-sm-3 text-center">
-            <a href="/faq">VIEW FAQ</a>
+            <a href="/faq"><strong>VIEW FAQ</strong></a>
           </div>
 
         </div>

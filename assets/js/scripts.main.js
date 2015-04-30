@@ -16,6 +16,7 @@
 // @codekit-prepend "../bower_components/components-modernizr/modernizr.js"
 // @codekit-prepend "../bower_components/BigVideo.js/lib/bigvideo.js"
 // @codekit-prepend "../bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"
+// @codekit-prepend "../src/js/accordion.js"
 
 // My Shit
 

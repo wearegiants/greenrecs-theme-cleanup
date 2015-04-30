@@ -1,0 +1,43 @@
+.page-header {
+
+  padding-top: @spaced*5;
+  background: @green;
+
+  .title {
+
+    color: @white;
+    font-family: @font-fam-subtitle;
+    .font_size(48);
+    margin-bottom: @spaced;
+
+  }
+
+  .featured-wrap {
+    background: @green;
+    position: relative;
+    transform: translate(0, -50%);
+  }
+
+  .featured-image {
+    display: inline-block;
+  }
+
+  .rule {
+    background: @white25;
+    margin: 0;
+  }
+
+  &.simple {
+
+    border-top: 1px solid @lightGray;
+    padding-top: @spaced*2;
+
+    .title {
+
+      color: @green;
+
+    }
+
+  }
+
+}

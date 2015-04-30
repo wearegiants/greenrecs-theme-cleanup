@@ -4,7 +4,7 @@ require_once locate_template('/lib/default.php');
 require_once locate_template('/lib/themewrangler.class.php');
 require_once locate_template('/lib/slug.php' );
 require_once locate_template('/lib/cleanassnav.php' );
-include_once locate_template('/lib/custom-post-types.php' );
+//include_once locate_template('/lib/custom-post-types.php' );
 include_once locate_template('/lib/woo-disablebilling.php' );
 include_once locate_template('/lib/videoembed.php' );
 include_once locate_template('/lib/woo-ajax.php' );
@@ -32,6 +32,11 @@ add_theme_support('soil-clean-up');
 add_theme_support( 'woocommerce' );
 
 add_filter( 'woocommerce_enqueue_styles', 'jk_dequeue_styles' );
+
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );
+remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
 function jk_dequeue_styles( $enqueue_styles ) {
   unset( $enqueue_styles['woocommerce-general'] );  // Remove the gloss

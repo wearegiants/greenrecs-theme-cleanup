@@ -7,4 +7,14 @@ $(function(){
     minWidth: '740px'
   });
 
+  // Dropdown
+
+  $(".gr_form select").dropdown({
+    customClass: 'dropdown-menu'
+  });
+
+  // Accordion
+
+  $('#faq-accordion').accordion();
+
 });

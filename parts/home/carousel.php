@@ -1,11 +1,34 @@
+<?php if( have_rows('slider') ): ?>
+
 <div id="banner-carousel" class="royalslider rsMinW">
-  <div class="slide">
+
+<?php while ( have_rows('slider') ) : the_row();?>
+
+  <?php
+    $image = get_sub_field('background_image');
+    if( !empty($image) ):
+      $url = $image['url'];
+      $title = $image['title'];
+      $alt = $image['alt'];
+      $caption = $image['caption'];
+      $size = 'large';
+      $thumb = $image['sizes'][ $size ];
+      $width = $image['sizes'][ $size . '-width' ];
+      $height = $image['sizes'][ $size . '-height' ];
+    endif;
+
+  ?>
+
+  <div class="slide" style="background-image:url(<?php echo $thumb; ?>);">
     <div class="fs-row">
-      <div class="fs-cell fs-lg-6 fs-md-6 fs-sm-3">
-        <h1>Get your Cannabis Card <em>Online</em></h1>
-        <p>GreenRecs connects California-based cannabis patients and physicians online using digital-health</p>
-        <p>Get your cannabis card for $75 in about 3 days.</p>
+      <div class="fs-cell fs-max-6 fs-lg-7 fs-md-5 fs-sm-3">
+        <?php the_sub_field('description'); ?>
       </div>
     </div>
   </div><!-- Slide -->
+
+<?php endwhile; ?>
+
 </div>
+
+<?php endif; ?>
