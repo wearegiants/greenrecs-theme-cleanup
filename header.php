@@ -21,7 +21,7 @@
 
 <body <?php body_class('fs-grid'); ?>>
   <div class="wrapper">
-    <header id="head" class="main-nav">
+    <header id="head" class="main-nav <?php if(get_field('simple_header')):?>simple<?php endif;?>">
       <div class="fs-row">
         <?php
           $menuParameters = array(
@@ -33,7 +33,7 @@
             'depth'           => 0,
           );
         ?>
-        <nav id="logo-wrap" class="fs-cell fs-lg-3 fs-md-2 fs-sm-3"><a href="/"><?php bloginfo( 'name' ) ?></a></nav>
+        <nav id="logo-wrap" class="fs-cell fs-lg-3 fs-md-2 fs-sm-3"><a href="/" class="<?php if(get_field('simple_header')):?>simple<?php endif;?>"><?php bloginfo( 'name' ) ?></a></nav>
         <nav id="primary-nav" class="fs-cell fs-lg-9 fs-md-4 fs-sm-hide text-right"><?php echo strip_tags(wp_nav_menu( $menuParameters ), '<a>' ); ?></nav>
       </div>
     </header>

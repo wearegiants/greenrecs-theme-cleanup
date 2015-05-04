@@ -8,6 +8,7 @@
 
 .page-content {
 
+
   p {
 
     color: inherit;
@@ -24,8 +25,22 @@
 
   &.about {
 
-    background: @green;
+    //background: @green;
     color: @white;
+
+    h1,h2,h3,h4,h5,h6 {
+      color: inherit;
+    }
+
+  }
+
+  &.simple {
+
+    color: @textGray;
+
+    p {
+      color: @textGray;
+    }
 
     h1,h2,h3,h4,h5,h6 {
       color: inherit;
@@ -88,6 +103,19 @@
 
     }
 
+  }
+
+}
+
+#page section.checkicon {
+
+  height: 0;
+  position: relative;
+  padding: 0!important;
+
+  .icon {
+    .center();
+    display: inline-block;
   }
 
 }

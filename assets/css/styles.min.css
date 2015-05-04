@@ -4801,29 +4801,25 @@ button#gform_submit_button_1:hover {
   display: block;
   width: 100%;
 }
-.accordion li {
+.accordion ul > li {
   cursor: pointer;
   list-style-type: none;
   padding: 0;
   margin: 0;
   display: block;
   width: 100%;
-  border-bottom: 2px solid #f2f2f2;
 }
-.accordion li:last-child {
+.accordion ul > li:last-child {
   border-color: transparent;
 }
-.accordion li div {
+.accordion ul > li div {
   display: block;
   clear: both;
   padding-bottom: 25px;
   padding-left: 25px;
 }
-.accordion li div p:first-child {
+.accordion ul > li div p:first-child {
   margin-top: 0;
-}
-.accordion li div p:last-child {
-  margin-bottom: 0;
 }
 #faq-accordion {
   padding: 0;
@@ -4875,6 +4871,9 @@ button#gform_submit_button_1:hover {
   background-size: contain;
   background-repeat: no-repeat;
   text-indent: -99999px;
+}
+#head #logo-wrap a.simple {
+  background-image: url(/assets/img/green-recs-logo-light.png);
 }
 .home #head a {
   color: #ffffff;
@@ -4967,7 +4966,6 @@ button#gform_submit_button_1:hover {
   line-height: 1.3;
 }
 .page-content.about {
-  background: #32b375;
   color: #ffffff;
 }
 .page-content.about h1,
@@ -4976,6 +4974,20 @@ button#gform_submit_button_1:hover {
 .page-content.about h4,
 .page-content.about h5,
 .page-content.about h6 {
+  color: inherit;
+}
+.page-content.simple {
+  color: #666666;
+}
+.page-content.simple p {
+  color: #666666;
+}
+.page-content.simple h1,
+.page-content.simple h2,
+.page-content.simple h3,
+.page-content.simple h4,
+.page-content.simple h5,
+.page-content.simple h6 {
   color: inherit;
 }
 #page .page-content {
@@ -5018,9 +5030,22 @@ button#gform_submit_button_1:hover {
 #page section p:last-child {
   margin-bottom: 0;
 }
+#page section.checkicon {
+  height: 0;
+  position: relative;
+  padding: 0!important;
+}
+#page section.checkicon .icon {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: inline-block;
+}
 .page-header {
   padding-top: 125px;
-  background: #32b375;
 }
 .page-header .title {
   color: #ffffff;
@@ -5030,7 +5055,6 @@ button#gform_submit_button_1:hover {
   margin-bottom: 25px;
 }
 .page-header .featured-wrap {
-  background: #32b375;
   position: relative;
   -webkit-transform: translate(0, -50%);
       -ms-transform: translate(0, -50%);
@@ -5045,10 +5069,17 @@ button#gform_submit_button_1:hover {
 }
 .page-header.simple {
   border-top: 1px solid #cbcbd2;
-  padding-top: 50px;
 }
 .page-header.simple .title {
   color: #32b375;
+}
+.page-header.simple .rule {
+  background: #e7e7ec;
+  margin: 0;
+}
+#header-wrap {
+  background-position: center top;
+  background-size: cover;
 }
 #home--wrapper h2 {
   margin-bottom: 31.25px;
@@ -5417,4 +5448,14 @@ button#gform_submit_button_1:hover {
     font-size: 24px;
     font-size: 1.5rem;
   }
+}
+#page.doctors .page-content.doctors {
+  padding-bottom: 0;
+}
+#page.doctors #doctors--qualifications {
+  background: #f2f2f2;
+  border-bottom: 1px solid #e7e7ec;
+}
+#page.doctors #doctors--howitworks {
+  border-bottom: 1px solid #e7e7ec;
 }

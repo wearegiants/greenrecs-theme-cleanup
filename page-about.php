@@ -1,18 +1,24 @@
 <?php Themewrangler::setup_page();get_header(/***Template Name: About */); ?>
 
-<?php get_template_part('parts/page', 'header' );?>
-
 <div id="page" class="about">
 
-  <article class="page-content about text-center">
-    <div class="fs-row">
-      <div class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered">
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-        <?php the_content();?>
-        <?php endwhile; endif; ?>
+  <?php $image = get_field('page_header_image'); ?>
+
+  <div id="header-wrap" style="background-image:url(<?php echo $image; ?>);">
+
+    <?php get_template_part('parts/page', 'header' );?>
+
+    <article class="page-content about text-center">
+      <div class="fs-row">
+        <div class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered">
+          <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+          <?php the_content();?>
+          <?php endwhile; endif; ?>
+        </div>
       </div>
-    </div>
-  </article>
+    </article>
+
+  </div><!-- Header -->
 
   <section id="about--checkicon">
     <div class="fs-row">
@@ -26,7 +32,7 @@
     <div class="fs-row">
       <div class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered bg">
         <div class="fs-row">
-          <div class="fs-cell fs-lg-8 fs-md-4 fs-sm-3">
+          <div class="fs-cell fs-xl-8 fs-lg-7 fs-md-4 fs-sm-3">
             <?php the_field('about--our_team'); ?>
           </div>
         </div>
