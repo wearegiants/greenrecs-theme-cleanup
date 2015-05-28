@@ -2,9 +2,13 @@ $(function(){
 
   //Equalize
 
-  $("#home--legality").equalize({
+  $("#home--legality, #doctors--legality").equalize({
     target: ".sizer-item",
     minWidth: '740px'
+  });
+
+  $("#doctors--howitworks").equalize({
+    target: ".item"
   });
 
   // Dropdown

@@ -1893,6 +1893,12 @@
 .fs-carousel-enabled .fs-carousel-page.fs-carousel-active {
   opacity: 1;
 }
+/**
+	 * @class
+	 * @name .fs-equalize-element
+	 * @type element
+	 * @description Target Element
+	 */
 /*
 * Symbolset
 * www.symbolset.com
@@ -1929,6 +1935,7 @@
   -moz-font-feature-settings: "liga=1";
   -moz-font-feature-settings: "liga";
   -ms-font-feature-settings: "liga" 1;
+  -o-font-feature-settings: "liga";
   font-feature-settings: "liga";
   -webkit-font-smoothing: antialiased;
 }
@@ -4175,7 +4182,7 @@ body * {
   word-wrap: break-word;
 }
 ::-moz-selection,
-::-moz-selection{
+::-moz-selection {
   background: #eee;
   text-shadow: none;
 }
@@ -5056,9 +5063,21 @@ button#gform_submit_button_1:hover {
 }
 .page-header .featured-wrap {
   position: relative;
-  -webkit-transform: translate(0, -50%);
-      -ms-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+}
+@media screen and (min-width: 740px) {
+  .page-header .featured-wrap {
+    margin-top: -48px;
+  }
+}
+@media screen and (min-width: 980px) {
+  .page-header .featured-wrap {
+    margin-top: -60px;
+  }
+}
+@media screen and (min-width: 1220px) {
+  .page-header .featured-wrap {
+    margin-top: -80px;
+  }
 }
 .page-header .featured-image {
   display: inline-block;
@@ -5071,7 +5090,7 @@ button#gform_submit_button_1:hover {
   border-top: 1px solid #cbcbd2;
 }
 .page-header.simple .title {
-  color: #32b375;
+  color: #0a693a;
 }
 .page-header.simple .rule {
   background: #e7e7ec;

@@ -15,7 +15,19 @@
   .featured-wrap {
     //background: @green;
     position: relative;
-    transform: translate(0, -50%);
+
+    @media @tablet {
+      margin-top: -48px;
+    }
+
+    @media @desktop {
+      margin-top: -60px;
+    }
+
+    @media @max {
+      margin-top: -80px;
+    }
+    //transform: translate(0, -50%);
   }
 
   .featured-image {
@@ -34,7 +46,7 @@
 
     .title {
 
-      color: @green;
+      color: @darkgreen;
 
     }
 
