@@ -117,21 +117,35 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     border: 2px solid darken(@green, 5%);
+
+    &:before {
+      position: relative;
+      top: .15em;
+    }
+
     &:hover {
       background: darken(@green, 5%);
       border: 2px solid darken(@green, 8%);
     }
+
     @media @xs {
       .font_size(17);
       padding: 0;
     }
+
     @media @mobile {
       .font_size(20);
       padding: 0 25px;
     }
+
     @media @desktop {
+      .font_size(16);
+      padding: 0;
+    }
+
+    @media @max {
       .font_size(20);
-      padding: 0 25px;
+      padding: 0;
     }
 
   }

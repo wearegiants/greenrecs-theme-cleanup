@@ -21,8 +21,12 @@
 
   <div class="slide" style="background-image:url(<?php echo $thumb; ?>);">
     <div class="fs-row">
-      <div class="fs-cell fs-max-6 fs-lg-7 fs-md-5 fs-sm-3">
-        <?php the_sub_field('description'); ?>
+      <div class="fs-cell <?php echo $maxWidth; ?> fs-md-5 fs-sm-3 fs-centered">
+        <div class="fs-row">
+          <div class="fs-cell fs-mx-8 fs-lg-10 fs-md-6 fs-sm-3">
+            <?php the_sub_field('description'); ?>
+          </div>
+        </div>
       </div>
     </div>
   </div><!-- Slide -->

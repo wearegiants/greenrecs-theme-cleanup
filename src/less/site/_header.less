@@ -5,6 +5,26 @@
   padding: @spaced 0 0;
   z-index: 9;
 
+  &.banner--clone {
+    position:fixed;
+    top:0;
+    left:0;
+    background:@black75;
+    padding-top: 0;
+    -webkit-transform:translateY(-100%);
+    -ms-transform:translateY(-100%);
+    transform:translateY(-100%);
+    -webkit-transition:all 300ms ease-in-out;
+    -moz-transition:all 300ms ease-in-out;
+    transition:all 300ms ease-in-out
+  }
+
+  &.banner--stick {
+    -webkit-transform:translateY(0%);
+    -ms-transform:translateY(0%);
+    transform:translateY(0%)
+  }
+
   a {
 
     @btnheight: 75px;

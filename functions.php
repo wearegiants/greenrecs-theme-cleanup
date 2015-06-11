@@ -49,25 +49,30 @@ add_filter( 'woocommerce_enqueue_styles', '__return_false' );
 
 $settings = array(
 
-  'available_scripts' => array(
+  'available_scripts'   => array(
     'jquery-g'          => array('//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js','1.11.1'),
-    'scripts'           => array('/assets/js/scripts.min.js'),
+    'vendor'            => array('/assets/js/vendor.min.js'),
+    'app'               => array('/assets/js/scripts.min.js'),
     'jqueryui'          => array('//ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js'),
-    'videojs'           => array('//vjs.zencdn.net/4.3/video.js'),
+    'bootstrap'         => array('//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js'),
+    'bsmodal'           => array('//cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.5/js/bootstrap-modalmanager.min.js'),
     ),
 
   'default_scripts'   => array(
     'jqueryui',
-    'videojs',
-    'scripts',
+    'vendor',
+    'app',
     ),
 
   'available_stylesheets' => array(
-    'default'           => array('/assets/css/styles.min.css'),
+    'vendor'          => array('/assets/css/vendor.min.css'),
+    'theme'           => array('/assets/css/theme.min.css'),
+    'boostrap'        => array('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css'),
     ),
 
   'default_stylesheets' => array(
-    'default'
+    'vendor',
+    'theme',
     ),
 
   'deregister_scripts' => array('jquery','l10n')

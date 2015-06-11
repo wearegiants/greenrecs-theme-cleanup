@@ -1,21 +1,27 @@
 <?php Themewrangler::setup_page();get_header(/***Template Name: Homepage */); ?>
 
+<?php $maxWidth = 'fs-lg-10'; ?>
+
 <div id="home--wrapper">
 
   <div id="home--banner" class="bg green"><?php include locate_template('parts/home/carousel.php' ); ?></div>
 
   <div id="home--schedule">
     <div class="fs-row">
-      <div class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered">
+      <div class="fs-cell <?php echo $maxWidth; ?> fs-md-6 fs-sm-3 fs-centered">
         <div class="fs-row">
           <div class="fs-cell fs-lg-5 fs-md-6 fs-sm-3 fs-right">
-            <button class="btn big btn-lg wide cta ss-gizmo ss-navigateright">Reserve your recommendation</button>
+            <a href="sign-up" class="btn big btn-lg wide cta ss-gizmo ss-navigateright">Get Your Rec</a>
           </div>
           <hr class="invisible fs-lg-hide fs-md-6 fs-sm-3 fs-left">
-          <div class="fs-cell fs-lg-6 fs-md-6 fs-sm-3 fs-left">
-            <div class="icon doctor left"><img src="/assets/img/doctor.png" class="img-responsive" /></div>
-            <h2><?php the_field('title_signup');?></h2>
-            <p>Sign up and choose a date and time that works best for you. Our average appointment time is about 15-30 minutes.</p>
+          <div class="fs-cell fs-lg-7 fs-md-6 fs-sm-3 fs-left">
+            <div class="fs-row">
+              <div class="icon doctor fs-cell fs-max-2 fs-lg-2 fs-md-1 fs-sm-hide"><img src="/assets/img/doctor.png" class="img-responsive" /></div>
+              <div class="fs-cell fs-cell fs-max-12 fs-lg-10 fs-md-5 fs-sm-3">
+                <h2><?php the_field('title_signup');?></h2>
+                <p>Sign up and choose a date and time that works best for you. Our average appointment time is about 15-30 minutes.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -24,7 +30,7 @@
 
   <div id="home--physicians" class="bg lightgray">
     <div class="fs-row">
-      <div class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered">
+      <div class="fs-cell <?php echo $maxWidth; ?> fs-md-6 fs-sm-3 fs-centered">
         <div class="fs-row">
           <div class="fs-cell fs-lg-6 fs-md-4 fs-sm-3 fs-right text-center">
             <h2><?php the_field('title_physicians');?></h2>
@@ -43,8 +49,8 @@
 
   <div id="home--howitworks" class="bg lightgray">
     <div class="fs-row">
-      <header class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered text-center"><h2><?php the_field('title_howitworks');?></h2></header>
-      <div class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered">
+      <header class="fs-cell <?php echo $maxWidth; ?> fs-md-6 fs-sm-3 fs-centered text-center"><h2><?php the_field('title_howitworks');?></h2></header>
+      <div class="fs-cell <?php echo $maxWidth; ?> fs-md-6 fs-sm-3 fs-centered">
         <div class="fs-row">
 
           <div class="fs-cell fs-lg-4 fs-md-6 fs-sm-3 text-center">
@@ -80,8 +86,8 @@
 
   <div id="home--legality">
     <div class="fs-row">
-      <header class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered text-center"><h2><?php the_field('title_legal');?></h2></header>
-      <div class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered">
+      <header class="fs-cell <?php echo $maxWidth; ?> fs-md-6 fs-sm-3 fs-centered text-center"><h2><?php the_field('title_legal');?></h2></header>
+      <div class="fs-cell <?php echo $maxWidth; ?> fs-md-6 fs-sm-3 fs-centered">
         <div class="fs-row">
           <div class="fs-cell fs-lg-5 fs-md-6 fs-sm-3 sizer-item">
             <div class="icon check"><img src="/assets/img/senate.png" /></div>
@@ -108,8 +114,8 @@
 
   <div id="home--testimonials" class="testimonials bg lightgray">
     <div class="fs-row">
-      <header class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered text-center"><h2>Testimonials</h2></header>
-      <div class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered">
+      <header class="fs-cell <?php echo $maxWidth; ?> fs-md-6 fs-sm-3 fs-centered text-center"><h2>Testimonials</h2></header>
+      <div class="fs-cell <?php echo $maxWidth; ?> fs-md-6 fs-sm-3 fs-centered">
         <div class="fs-row">
 
           <div class="testimonial fs-cell fs-lg-4 fs-md-6 fs-sm-3 text-center">
@@ -137,8 +143,8 @@
 
   <div id="home--faq" class="faq">
     <div class="fs-row">
-      <header class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered text-center"><h2><?php the_field('title_faq'); ?></h2></header>
-      <div class="fs-cell fs-lg-11 fs-md-6 fs-sm-3 fs-centered">
+      <header class="fs-cell <?php echo $maxWidth; ?> fs-md-6 fs-sm-3 fs-centered text-center"><h2><?php the_field('title_faq'); ?></h2></header>
+      <div class="fs-cell <?php echo $maxWidth; ?> fs-md-6 fs-sm-3 fs-centered">
         <div class="fs-row">
 
           <div class="faq-item fs-cell fs-lg-4 fs-md-6 fs-sm-3 text-center">

@@ -5411,9 +5411,9 @@ button#gform_submit_button_1:hover {
   border-bottom: 1px solid #32b375;
 }
 #home--banner .slide {
-  color: #ffffff;
   background-size: cover;
-  background-position: top center;
+  background-position: center center;
+  color: #ffffff;
 }
 @media screen and (min-width: 300px) {
   #home--banner .slide {

@@ -91,22 +91,6 @@
     }
   }
 
-  .icon {
-
-    @media @xs {
-      width: 50px;
-      display: none;
-    }
-    @media @mobile {
-      width: 70px;
-      display: block;
-    }
-    @media @desktop {
-      width: 70px;
-    }
-
-  }
-
 }
 
 #home--physicians {
@@ -355,6 +339,9 @@
 
   .slide {
 
+    background-size: cover;
+    background-position: center center;
+
     @media @xs {
       padding: @spaced*4 0 @spaced;
     }
@@ -389,9 +376,6 @@
          .font_size(24);
       }
     }
-
-    background-size: cover;
-    background-position: top center;
 
   }
 
