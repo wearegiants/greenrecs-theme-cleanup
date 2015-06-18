@@ -10,7 +10,7 @@ include_once ('lib/videoembed.php' );
 include_once ('lib/woo-ajax.php' );
 include_once ('lib/advanced-custom-fields-pro/acf.php' );
 include_once ('lib/soil-master/soil.php' );
-include_once ('lib/roots-rewrites-master/roots-rewrites.php' );
+//include_once ('lib/roots-rewrites-master/roots-rewrites.php' );
 include_once ('lib/opengraph/opengraph.php' );
 include_once ('lib/config.php' );
 
