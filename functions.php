@@ -10,7 +10,7 @@ include_once ('lib/videoembed.php' );
 include_once ('lib/woo-ajax.php' );
 include_once ('lib/advanced-custom-fields-pro/acf.php' );
 include_once ('lib/soil-master/soil.php' );
-//include_once ('lib/roots-rewrites-master/roots-rewrites.php' );
+include_once ('lib/roots-rewrites-master/roots-rewrites.php' );
 include_once ('lib/opengraph/opengraph.php' );
 include_once ('lib/config.php' );
 
@@ -52,7 +52,7 @@ $settings = array(
 
   'available_scripts'   => array(
     'jquery-g'          => array('//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js','1.11.1'),
-    'vendor'            => array('/assets/js/vendor.min.js', '1.1'),
+    'vendor'            => array('/assets/js/vendor.min.js', '1.2'),
     'app'               => array('/assets/js/scripts.min.js', '1.1'),
     'jqueryui'          => array('//ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js', '1.11.3'),
     'bootstrap'         => array('//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js', '3.3.4'),
