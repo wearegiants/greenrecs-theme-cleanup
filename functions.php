@@ -1,30 +1,31 @@
 <?php
 
-require_once locate_template('/lib/default.php');
-require_once locate_template('/lib/themewrangler.class.php');
-require_once locate_template('/lib/slug.php' );
-require_once locate_template('/lib/cleanassnav.php' );
-//include_once locate_template('/lib/custom-post-types.php' );
-include_once locate_template('/lib/woo-disablebilling.php' );
-include_once locate_template('/lib/videoembed.php' );
-include_once locate_template('/lib/woo-ajax.php' );
-include_once locate_template('/lib/advanced-custom-fields-pro/acf.php' );
-include_once locate_template('/lib/soil-master/soil.php' );
-include_once locate_template('/lib/roots-rewrites-master/roots-rewrites.php' );
-include_once locate_template('/lib/opengraph/opengraph.php' );
-include_once locate_template('/lib/config.php' );
+require_once ('lib/default.php');
+require_once ('lib/themewrangler.class.php');
+require_once ('lib/slug.php');
+require_once ('lib/cleanassnav.php' );
+//include_once ('lib/custom-post-types.php' );
+include_once ('lib/woo-disablebilling.php' );
+include_once ('lib/videoembed.php' );
+include_once ('lib/woo-ajax.php' );
+include_once ('lib/advanced-custom-fields-pro/acf.php' );
+include_once ('lib/soil-master/soil.php' );
+//include_once ('lib/roots-rewrites-master/roots-rewrites.php' );
+include_once ('lib/opengraph/opengraph.php' );
+include_once ('lib/config.php' );
 
-add_filter('acf/settings/path', 'my_acf_settings_path');
 function my_acf_settings_path( $path ) {
   $path = get_stylesheet_directory() . '/lib/advanced-custom-fields-pro/';
   return $path;
 }
+add_filter('acf/settings/path', 'my_acf_settings_path');
 
-add_filter('acf/settings/dir', 'my_acf_settings_dir');
+
 function my_acf_settings_dir( $dir ) {
  $dir = get_stylesheet_directory_uri() . '/lib/advanced-custom-fields-pro/';
  return $dir;
 }
+add_filter('acf/settings/dir', 'my_acf_settings_dir');
 
 add_theme_support('soil-relative-urls');
 add_theme_support('soil-nice-search');
@@ -51,11 +52,11 @@ $settings = array(
 
   'available_scripts'   => array(
     'jquery-g'          => array('//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js','1.11.1'),
-    'vendor'            => array('/assets/js/vendor.min.js'),
-    'app'               => array('/assets/js/scripts.min.js'),
-    'jqueryui'          => array('//ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js'),
-    'bootstrap'         => array('//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js'),
-    'bsmodal'           => array('//cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.5/js/bootstrap-modalmanager.min.js'),
+    'vendor'            => array('/assets/js/vendor.min.js', '1.1'),
+    'app'               => array('/assets/js/scripts.min.js', '1.1'),
+    'jqueryui'          => array('//ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js', '1.11.3'),
+    'bootstrap'         => array('//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js', '3.3.4'),
+    'bsmodal'           => array('//cdnjs.cloudflare.com/ajax/libs/bootstrap-modal/2.2.5/js/bootstrap-modalmanager.min.js', '2.2.5'),
     ),
 
   'default_scripts'   => array(
@@ -65,11 +66,12 @@ $settings = array(
     ),
 
   'available_stylesheets' => array(
-    'vendor'          => array('/assets/css/vendor.min.css'),
-    'theme'           => array('/assets/css/theme.min.css'),
-    'boostrap'        => array('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css'),
+    'vendor'          => array('/assets/css/vendor.min.css', 1),
+    'theme'           => array('/assets/css/theme.min.css', 1),
+    'boostrap'        => array('//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css', 1),
     ),
 
+  'remove_from_head' => [],
   'default_stylesheets' => array(
     'vendor',
     'theme',
