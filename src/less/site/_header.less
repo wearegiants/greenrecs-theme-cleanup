@@ -5,18 +5,47 @@
   padding: @spaced 0 0;
   z-index: 9;
 
+  #logo-wrap {
+
+    a {
+
+      display: block;
+      background-image: url(/assets/img/gr-logo-white.png);
+      background-position: center left;
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      text-indent: -99999px;
+
+      &.simple {
+        background-image: url(/assets/img/green-recs-logo-light.png);
+      }
+
+    }
+
+  }
+
   &.banner--clone {
     position:fixed;
     top:0;
     left:0;
-    background:@black75;
+    background:@green;
     padding-top: 0;
     -webkit-transform:translateY(-100%);
     -ms-transform:translateY(-100%);
     transform:translateY(-100%);
     -webkit-transition:all 300ms ease-in-out;
     -moz-transition:all 300ms ease-in-out;
-    transition:all 300ms ease-in-out
+    transition:all 300ms ease-in-out;
+
+    a {
+      color: @white;
+    }
+
+    #logo-wrap {
+      a.simple {
+        background-image: url(/assets/img/greenrecs-logo-dark.png);
+      }
+    }
   }
 
   &.banner--stick {
@@ -40,26 +69,6 @@
     }
 
   }
-
-  #logo-wrap {
-
-    a {
-
-      display: block;
-      background-image: url(/assets/img/gr-logo-white.png);
-      background-position: center left;
-      background-size: contain;
-      background-repeat: no-repeat;
-      text-indent: -99999px;
-
-      &.simple {
-        background-image: url(/assets/img/green-recs-logo-light.png);
-      }
-
-    }
-
-  }
-
 
 }
 

@@ -15,13 +15,13 @@
 <![endif]-->
 
 <script type="text/javascript" src="http://fast.fonts.net/jsapi/9821687b-b5e8-4bbf-89bc-1a07c39cca82.js"></script>
-
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class('fs-grid'); ?>>
   <div class="wrapper">
-    <header id="head" class="main-nav <?php if(get_field('simple_header')):?>simple<?php endif;?>">
+
+    <header id="head" class="main-nav <?php if(get_field('white_background')){ echo 'light'; } ?> <?php if(get_field('simple_header')):?>simple<?php endif;?>">
       <div class="fs-row">
         <?php
           $menuParameters = array(

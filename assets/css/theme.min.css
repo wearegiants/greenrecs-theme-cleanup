@@ -351,6 +351,19 @@ form textarea:focus {
     text-align: right;
   }
 }
+.text-left {
+  text-align: left;
+}
+@media screen and (min-width: 300px) {
+  .text-left {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 980px) {
+  .text-left {
+    text-align: left;
+  }
+}
 .divider {
   background: #e7e7ec;
 }
@@ -743,11 +756,22 @@ button#gform_submit_button_1:hover {
   padding: 25px 0 0;
   z-index: 9;
 }
+#head #logo-wrap a {
+  display: block;
+  background-image: url(/assets/img/gr-logo-white.png);
+  background-position: center left;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  text-indent: -99999px;
+}
+#head #logo-wrap a.simple {
+  background-image: url(/assets/img/green-recs-logo-light.png);
+}
 #head.banner--clone {
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.75);
+  background: #32b375;
   padding-top: 0;
   -webkit-transform: translateY(-100%);
   -ms-transform: translateY(-100%);
@@ -755,6 +779,12 @@ button#gform_submit_button_1:hover {
   -webkit-transition: all 300ms ease-in-out;
   -moz-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
+}
+#head.banner--clone a {
+  color: #ffffff;
+}
+#head.banner--clone #logo-wrap a.simple {
+  background-image: url(/assets/img/greenrecs-logo-dark.png);
 }
 #head.banner--stick {
   -webkit-transform: translateY(0%);
@@ -772,17 +802,6 @@ button#gform_submit_button_1:hover {
 }
 #head a:last-child {
   padding-right: 0;
-}
-#head #logo-wrap a {
-  display: block;
-  background-image: url(/assets/img/gr-logo-white.png);
-  background-position: center left;
-  background-size: contain;
-  background-repeat: no-repeat;
-  text-indent: -99999px;
-}
-#head #logo-wrap a.simple {
-  background-image: url(/assets/img/green-recs-logo-light.png);
 }
 .home #head a {
   color: #ffffff;
@@ -975,7 +994,7 @@ button#gform_submit_button_1:hover {
 }
 @media screen and (min-width: 1220px) {
   .page-header .featured-wrap {
-    margin-top: -80px;
+    transform: translate(0, -50%);
   }
 }
 .page-header .featured-image {
@@ -1409,4 +1428,45 @@ button#gform_submit_button_1:hover {
   line-height: 1.2;
   display: block;
   top: 100%;
+}
+#signup--form {
+  margin-bottom: 50px;
+}
+#signup--form .form {
+  border: 1px solid #e7e7ec;
+  padding: 25px;
+}
+#signup--form .form .fs-cell {
+  margin-bottom: 25px;
+}
+#signup--form .form--reach input {
+  display: inline-block;
+  width: 70px;
+}
+#signup--form .form--reach .ginput_container {
+  display: inline-block;
+  margin-right: 15px;
+}
+#signup--form .form--reach .ginput_container label {
+  display: inline-block;
+  margin-left: 5px;
+}
+#signup--form .form .gform_footer {
+  text-align: center;
+  padding-top: 15px;
+}
+#signup--form .form .gform_footer .button {
+  margin-bottom: 0;
+  padding: 0 20px;
+  height: 40px;
+  line-height: 40px;
+}
+#signup--form .form ul {
+  padding: 0;
+  margin: 0;
+}
+#signup--form .form ul:after {
+  content: '';
+  display: block;
+  clear: both;
 }
