@@ -1,7 +1,3 @@
-.bg.yolo {
-	background: #000;
-}
-
 .bg.green {
   background: #32b375;
 }
@@ -786,6 +782,11 @@ button#gform_submit_button_1:hover {
   padding: 25px 0 0;
   z-index: 9;
 }
+@media screen and (min-width: 300px) {
+  #head #primary-nav.text-right {
+    text-align: right;
+  }
+}
 #head #logo-wrap a {
   display: block;
   background-image: url(/assets/img/gr-logo-white.png);
@@ -1515,6 +1516,11 @@ button#gform_submit_button_1:hover {
 }
 .booking-form .title {
   margin-bottom: 0;
+}
+@media screen and (min-width: 300px) {
+  .booking-form .text-center {
+    text-align: center;
+  }
 }
 .booking-form p {
   font-size: 16px;
