@@ -1,0 +1,85 @@
+.booking-form {
+
+	.title {
+		margin-bottom: 0;
+	}
+
+	p {
+		.font_size(16);
+	}
+
+	.radio-inline, .fs-checkbox {
+
+		display: inline-block;
+		height: 30px;
+		line-height: 30px;
+		margin-right: 15px;
+
+		&-marker {
+			display: inline-block;
+			float: left;
+		}
+
+		label {
+			display: block;
+			float: right;
+			margin: 0;
+			height: 20px;
+			line-height: 22px;
+		}
+
+	}
+
+	input {
+		&.form-control {
+			.font_size(15);
+			border-radius: 2px!important;
+			-webkit-font-smoothing: antialiased;
+			height: 40px;
+		}
+	}
+
+	.fs-dropdown {
+		button {
+			-webkit-font-smoothing: antialiased;
+			font-weight: 300;
+			content: @textGray;
+		}
+	}
+
+	div.questions {
+		ul {
+			padding-left: 15px;
+			li {
+				ul {
+					margin-top: 10px;
+					
+					li {
+						
+					}
+				}
+			}
+		}
+	}
+
+	ul.questions, ol.questions {
+		padding: 0;
+		&:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+		li {
+			margin-bottom: @spaced;
+			&:before {
+				display: none;
+			}
+			&:after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+		}
+	}
+
+}

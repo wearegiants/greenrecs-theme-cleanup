@@ -1,7 +1,7 @@
 <?php Themewrangler::setup_page();get_header(/***Template Name: Booker */); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-<div id="signup">
+<div id="signup" class="booking-form">
   <header class="page-header text-center simple">
     <hr class="rule">
     <div class="fs-row">
@@ -14,7 +14,7 @@
       </div>
     </div>
   </header>
-  <div id="signup--content">
+  <div id="content" class="booking-form">
     <div class="fs-row">
       <div class="fs-cell fs-xl-9 fs-lg-10 fs-md-5 fs-sm-3 fs-centered">
         <?php the_content(); ?>

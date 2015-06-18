@@ -33,7 +33,8 @@ img.rounded {
 *:hover,
 *:active,
 *:focus {
-  transition: background-color 0.1s linear, border-color 0.1s linear, color 0.1s linear, opacity 0.1s linear;
+  -webkit-transition: background-color 0.1s linear, border-color 0.1s linear, color 0.1s linear, opacity 0.1s linear;
+          transition: background-color 0.1s linear, border-color 0.1s linear, color 0.1s linear, opacity 0.1s linear;
 }
 *:focus,
 *:hover,
@@ -51,6 +52,11 @@ body {
 }
 body * {
   word-wrap: break-word;
+}
+::-moz-selection,
+::-moz-selection {
+  background: #eee;
+  text-shadow: none;
 }
 ::selection,
 ::-moz-selection {
@@ -480,7 +486,10 @@ button {
   display: inline-block;
   margin: 0 0 10px 0;
   text-align: center;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   font-weight: 600;
   border-radius: 3px;
   height: 34px;
@@ -590,10 +599,11 @@ button#gform_submit_button_1 {
   color: #ffffff !important;
   font-weight: normal;
   height: 60px;
-  line-height: 55px;
+  line-height: 60px;
   text-transform: uppercase;
   letter-spacing: 1px;
   border: 2px solid #2c9f68;
+  padding: 0 20px!important;
 }
 .btn.cta:before,
 .button.cta:before,
@@ -787,20 +797,16 @@ button#gform_submit_button_1:hover {
   position: fixed;
   top: 0;
   left: 0;
-  background: #32b375;
+  background: rgba(255, 255, 255, 0.75);
   padding-top: 0;
   -webkit-transform: translateY(-100%);
   -ms-transform: translateY(-100%);
   transform: translateY(-100%);
   -webkit-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
 #head.banner--clone a {
   color: #ffffff;
-}
-#head.banner--clone #logo-wrap a.simple {
-  background-image: url(/assets/img/greenrecs-logo-dark.png);
 }
 #head.banner--stick {
   -webkit-transform: translateY(0%);
@@ -954,7 +960,9 @@ button#gform_submit_button_1:hover {
 #page section#about--checkicon .icon {
   display: inline-block;
   position: relative;
-  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
 }
 #page section#about--our-team {
   padding: 0;
@@ -979,7 +987,9 @@ button#gform_submit_button_1:hover {
   left: 50%;
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   display: inline-block;
 }
 .page-header {
@@ -1013,7 +1023,9 @@ button#gform_submit_button_1:hover {
 }
 @media screen and (min-width: 1220px) {
   .page-header .featured-wrap {
-    transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
   }
 }
 .page-header .featured-image {
@@ -1249,7 +1261,9 @@ button#gform_submit_button_1:hover {
     left: 0%;
     position: absolute;
     top: 50%;
-    transform: translate(0%, -50%);
+    -webkit-transform: translate(0%, -50%);
+        -ms-transform: translate(0%, -50%);
+            transform: translate(0%, -50%);
     left: 0;
   }
 }
@@ -1258,7 +1272,9 @@ button#gform_submit_button_1:hover {
     left: 0%;
     position: absolute;
     top: 50%;
-    transform: translate(0%, -50%);
+    -webkit-transform: translate(0%, -50%);
+        -ms-transform: translate(0%, -50%);
+            transform: translate(0%, -50%);
     left: 0;
   }
 }
@@ -1267,7 +1283,9 @@ button#gform_submit_button_1:hover {
     left: 0%;
     position: absolute;
     top: 50%;
-    transform: translate(0%, -50%);
+    -webkit-transform: translate(0%, -50%);
+        -ms-transform: translate(0%, -50%);
+            transform: translate(0%, -50%);
     left: 0;
   }
 }
@@ -1276,7 +1294,9 @@ button#gform_submit_button_1:hover {
     left: 50%;
     position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 }
 #home--faq {
@@ -1485,6 +1505,75 @@ button#gform_submit_button_1:hover {
   margin: 0;
 }
 #signup--form .form ul:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.booking-form .title {
+  margin-bottom: 0;
+}
+.booking-form p {
+  font-size: 16px;
+  font-size: 1rem;
+}
+.booking-form .radio-inline,
+.booking-form .fs-checkbox {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 15px;
+}
+.booking-form .radio-inline-marker,
+.booking-form .fs-checkbox-marker {
+  display: inline-block;
+  float: left;
+}
+.booking-form .radio-inline label,
+.booking-form .fs-checkbox label {
+  display: block;
+  float: right;
+  margin: 0;
+  height: 20px;
+  line-height: 22px;
+}
+.booking-form input.form-control {
+  font-size: 15px;
+  font-size: 0.9375rem;
+  border-radius: 2px!important;
+  -webkit-font-smoothing: antialiased;
+  height: 40px;
+}
+.booking-form .fs-dropdown button {
+  -webkit-font-smoothing: antialiased;
+  font-weight: 300;
+  content: #666666;
+}
+.booking-form div.questions ul {
+  padding-left: 15px;
+}
+.booking-form div.questions ul li ul {
+  margin-top: 10px;
+}
+.booking-form ul.questions,
+.booking-form ol.questions {
+  padding: 0;
+}
+.booking-form ul.questions:after,
+.booking-form ol.questions:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.booking-form ul.questions li,
+.booking-form ol.questions li {
+  margin-bottom: 25px;
+}
+.booking-form ul.questions li:before,
+.booking-form ol.questions li:before {
+  display: none;
+}
+.booking-form ul.questions li:after,
+.booking-form ol.questions li:after {
   content: '';
   display: block;
   clear: both;
