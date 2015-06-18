@@ -27,7 +27,7 @@ function my_acf_settings_dir( $dir ) {
 }
 add_filter('acf/settings/dir', 'my_acf_settings_dir');
 
-add_theme_support('soil-relative-urls');
+//add_theme_support('soil-relative-urls');
 add_theme_support('soil-nice-search');
 add_theme_support('soil-clean-up');
 add_theme_support( 'woocommerce' );
