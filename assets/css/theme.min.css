@@ -1028,9 +1028,7 @@ button#gform_submit_button_1:hover {
 }
 @media screen and (min-width: 1220px) {
   .page-header .featured-wrap {
-    -webkit-transform: translate(0, -50%);
-        -ms-transform: translate(0, -50%);
-            transform: translate(0, -50%);
+    tmargin-top: -60px;
   }
 }
 .page-header .featured-image {
@@ -1514,8 +1512,10 @@ button#gform_submit_button_1:hover {
   display: block;
   clear: both;
 }
-.booking-form .title {
-  margin-bottom: 0;
+.booking-form-content {
+  padding: 37.5px;
+  border: 1px solid #f2f2f2;
+  box-shadow: 0 0 15px #f2f2f2;
 }
 @media screen and (min-width: 300px) {
   .booking-form .text-center {

@@ -16,8 +16,10 @@
   </header>
   <div id="content" class="booking-form">
     <div class="fs-row">
-      <div class="fs-cell fs-xl-9 fs-lg-10 fs-md-5 fs-sm-3 fs-centered">
+      <div class="fs-cell fs-xl-8 fs-lg-8 fs-md-5 fs-sm-3 fs-centered">
+        <div class="booking-form-content">
         <?php the_content(); ?>
+        </div>
       </div>
     </div>
   </div>
