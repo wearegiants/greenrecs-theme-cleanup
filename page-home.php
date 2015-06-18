@@ -11,7 +11,7 @@
       <div class="fs-cell <?php echo $maxWidth; ?> fs-md-6 fs-sm-3 fs-centered">
         <div class="fs-row">
           <div class="fs-cell fs-lg-5 fs-md-6 fs-sm-3 fs-right">
-            <a href="sign-up" class="btn big btn-lg wide cta ss-gizmo ss-navigateright">Get Your Rec</a>
+            <a href="sign-up" class="btn big btn-lg wide cta ss-gizmo ss-navigateright">Get Your Rec Today</a>
           </div>
           <hr class="invisible fs-lg-hide fs-md-6 fs-sm-3 fs-left">
           <div class="fs-cell fs-lg-7 fs-md-6 fs-sm-3 fs-left">

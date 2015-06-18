@@ -728,6 +728,20 @@ button#gform_submit_button_1:hover {
 #faq-accordion {
   padding: 0;
 }
+#faq-accordion li {
+  padding-left: 30px;
+  position: relative;
+  border-bottom: 1px solid #cbcbd2;
+}
+#faq-accordion li:last-child {
+  border-bottom-color: transparent;
+}
+#faq-accordion li .counter {
+  position: absolute;
+  left: 0;
+  padding: 12.5px 0;
+  color: #0a693a;
+}
 #faq-accordion li:before {
   display: none;
 }
@@ -737,7 +751,6 @@ button#gform_submit_button_1:hover {
 #faq-accordion .title {
   display: block;
   color: #32b375;
-  border-bottom: 1px solid #cbcbd2;
   font-size: 20px;
   font-size: 1.25rem;
   line-height: 1.4;
@@ -749,6 +762,9 @@ button#gform_submit_button_1:hover {
 }
 #faq-accordion .title:hover {
   color: #0a693a;
+}
+.page-home #CalendarPicker {
+  display: none;
 }
 #head {
   position: absolute;
@@ -795,13 +811,16 @@ button#gform_submit_button_1:hover {
   display: inline-block;
   height: 75px;
   line-height: 75px;
-  color: #0a693a;
+  color: #ffffff;
   margin: 0 -2px;
   font-weight: normal;
   padding: 0 10px;
 }
 #head a:last-child {
   padding-right: 0;
+}
+#head.simple a {
+  color: #0a693a;
 }
 .home #head a {
   color: #ffffff;

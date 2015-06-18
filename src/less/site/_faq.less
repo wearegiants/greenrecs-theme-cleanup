@@ -6,6 +6,21 @@
 
   li {
 
+    padding-left: 30px;
+    position: relative;
+    border-bottom: 1px solid @lightGray;
+
+    &:last-child {
+      border-bottom-color: transparent;
+    }
+
+    .counter {
+      position: absolute;
+      left: 0;
+      padding: @spaced/2 0;
+      color: @darkgreen;
+    }
+
     &:before {
       display: none;
     }
@@ -25,7 +40,6 @@
   .title {
     display: block;
     color: @green;
-    border-bottom: 1px solid @lightGray;
     .font_size(20);
     line-height: 1.4;
     padding: @spaced/2 0;
