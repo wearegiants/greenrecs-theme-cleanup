@@ -4719,6 +4719,15 @@ button#gform_submit_button_1 {
   letter-spacing: 1px;
   border: 2px solid #2c9f68;
 }
+.btn.cta:before,
+.button.cta:before,
+button.cta:before,
+.btn#gform_submit_button_1:before,
+.button#gform_submit_button_1:before,
+button#gform_submit_button_1:before {
+  position: relative;
+  top: .15em;
+}
 .btn.cta:hover,
 .button.cta:hover,
 button.cta:hover,
@@ -4759,9 +4768,21 @@ button#gform_submit_button_1:hover {
   .btn#gform_submit_button_1,
   .button#gform_submit_button_1,
   button#gform_submit_button_1 {
+    font-size: 16px;
+    font-size: 1rem;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1220px) {
+  .btn.cta,
+  .button.cta,
+  button.cta,
+  .btn#gform_submit_button_1,
+  .button#gform_submit_button_1,
+  button#gform_submit_button_1 {
     font-size: 20px;
     font-size: 1.25rem;
-    padding: 0 25px;
+    padding: 0;
   }
 }
 .gr_form ul li label.gfield_label {
@@ -4859,6 +4880,23 @@ button#gform_submit_button_1:hover {
   padding: 25px 0 0;
   z-index: 9;
 }
+#head.banner--clone {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  padding-top: 0;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+#head.banner--stick {
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%);
+}
 #head a {
   display: inline-block;
   height: 75px;
@@ -4952,11 +4990,6 @@ button#gform_submit_button_1:hover {
   #footer .lower .text-right {
     text-align: right;
   }
-}
-#content {
-  min-height: 300px;
-  padding-top: 125px;
-  background: #f2f2f2;
 }
 .page-content p {
   color: inherit;
@@ -5060,6 +5093,12 @@ button#gform_submit_button_1:hover {
   font-size: 48px;
   font-size: 3rem;
   margin-bottom: 25px;
+}
+.page-header-green {
+  background-color: #32b375;
+}
+.page-header-green .title {
+  content: #ffffff;
 }
 .page-header .featured-wrap {
   position: relative;
@@ -5180,23 +5219,6 @@ button#gform_submit_button_1:hover {
 @media screen and (min-width: 980px) {
   #home--schedule h2 br {
     display: block;
-  }
-}
-@media screen and (min-width: 300px) {
-  #home--schedule .icon {
-    width: 50px;
-    display: none;
-  }
-}
-@media screen and (min-width: 500px) {
-  #home--schedule .icon {
-    width: 70px;
-    display: block;
-  }
-}
-@media screen and (min-width: 980px) {
-  #home--schedule .icon {
-    width: 70px;
   }
 }
 #home--physicians {
@@ -5477,4 +5499,7 @@ button#gform_submit_button_1:hover {
 }
 #page.doctors #doctors--howitworks {
   border-bottom: 1px solid #e7e7ec;
+}
+#signup--form .form {
+  background: #f2f2f2;
 }

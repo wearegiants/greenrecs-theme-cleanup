@@ -64,3 +64,11 @@ return count( $comments_by_type['comment'] );
 return $count;
 }
 }
+
+add_action( 'gform_enqueue_scripts', 'gform_dequeue_script_list' );
+function gform_dequeue_script_list() { 
+    global $wp_styles; 
+    if( isset($wp_styles->registered['gforms_datepicker_css']) ) {
+        unset( $wp_styles->registered['gforms_datepicker_css'] );
+    } 
+}

@@ -855,11 +855,6 @@ button#gform_submit_button_1:hover {
     text-align: right;
   }
 }
-#content {
-  min-height: 300px;
-  padding-top: 125px;
-  background: #f2f2f2;
-}
 .page-content p {
   color: inherit;
   font-size: 22px;
@@ -958,6 +953,12 @@ button#gform_submit_button_1:hover {
   font-size: 48px;
   font-size: 3rem;
   margin-bottom: 25px;
+}
+.page-header-green {
+  background-color: #32b375;
+}
+.page-header-green .title {
+  content: #ffffff;
 }
 .page-header .featured-wrap {
   position: relative;
