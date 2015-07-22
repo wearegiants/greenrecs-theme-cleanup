@@ -16,7 +16,7 @@
           <hr class="invisible fs-lg-hide fs-md-6 fs-sm-3 fs-left">
           <div class="fs-cell fs-lg-7 fs-md-6 fs-sm-3 fs-left">
             <div class="fs-row">
-              <div class="icon doctor fs-cell fs-max-2 fs-lg-2 fs-md-1 fs-sm-hide"><img src="/assets/img/doctor.png" class="img-responsive" /></div>
+              <div class="icon doctor fs-cell fs-max-2 fs-lg-2 fs-md-1 fs-sm-hide"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/doctor.png" class="img-responsive" /></div>
               <div class="fs-cell fs-cell fs-max-12 fs-lg-10 fs-md-5 fs-sm-3">
                 <h2><?php the_field('title_signup');?></h2>
                 <p>Sign up and choose a date and time that works best for you. Our average appointment time is about 15-30 minutes.</p>
