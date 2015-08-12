@@ -31,9 +31,9 @@ $(function(){
 
   // Dropdown
 
-  $(".gr_form select, #signup select").dropdown({
-    customClass: 'dropdown-menu'
-  });
+  // $("#signup select").dropdown({
+  //   customClass: 'dropdown-menu'
+  // });
 
   // Accordion
 
